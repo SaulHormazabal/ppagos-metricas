@@ -1,3 +1,15 @@
+var $datepicker = $('#filter .input-group.date')
+
+$datepicker.datepicker({
+    language: 'es',
+    daysOfWeekHighlighted: '1,2,3,4,5',
+    autoclose: true,
+    format: 'yyyy-mm-dd',
+});
+
+$datepicker.datepicker('setDate', new Date());
+
+
 // CIERRE DE INSTRUCCIONES DE PAGO
 // -------------------------------
 

@@ -38,12 +38,37 @@
         <div class="row">
             <form id="filter" class="col-lg-2 col-lg-offset-5 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2" action="">
 
-                <div class="input-group date">
-                    <input type="text" class="form-control text-center">
-                    <span class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                    </span>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="control-label text-center" for="">Tipo de periodo</label>
+                        <select class="form-control" name="type" id="">
+                            <option value="">Año</option>
+                            <option value="" selected>Mes</option>
+                            <option value="">Otro</option>
+                        </select>
+                    </div>
                 </div>
+
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label class="control-label text-center" for="">Periodo</label>
+                        <select class="form-control" name="type" id="">
+                            <option value="">Ene17</option>
+                            <option value="">Feb17</option>
+                            <option value="">Mar17</option>
+                            <option value="">Abr17</option>
+                            <option value="">May17</option>
+                            <option value="">Jun17</option>
+                            <option value="">Jul17</option>
+                            <option value="" selected>Ago17</option>
+                            <option value="">Sep17</option>
+                            <option value="">Oct17</option>
+                            <option value="">Nov17</option>
+                            <option value="">Dic17</option>
+                        </select>
+                    </div>
+                </div>
+
             </form>
         </div>
 
@@ -332,14 +357,9 @@
     </div>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker3.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/locales/bootstrap-datepicker.es.min.js"></script>
 
     <script src="ppagos.metricas.js"></script>
 

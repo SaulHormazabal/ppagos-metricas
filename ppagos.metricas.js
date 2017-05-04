@@ -3,7 +3,7 @@
 
 var cierres_params = {
     size: {
-        height: 160,
+        height: 180,
     },
     data: {
         columns: [
@@ -11,10 +11,6 @@ var cierres_params = {
             ['Abiertos', 0.4, 0.3, 0.2],
         ],
         type: 'bar',
-        labels: {
-            // format: d3.format('p'),
-            format: function(value) {return (value * 100).toFixed(2) + '%'},
-        },
         order: 'asc',
         groups: [
             [
@@ -28,6 +24,9 @@ var cierres_params = {
             '#1F77B4',
             '#DDDDDD',
         ]
+    },
+    padding: {
+        right: 15,
     },
     axis: {
         x: {
@@ -65,7 +64,7 @@ c3.generate(Object.assign({bindto: '#cierres-servicios'}, cierres_params));
 c3.generate({
     bindto: '#completitud-acreedores',
     size: {
-        height: 160,
+        height: 180,
     },
     data: {
         columns: [
@@ -75,7 +74,17 @@ c3.generate({
             ['Pagos', 10, 35, 50],
         ],
         type: 'bar',
-        labels: true,
+    },
+    color: {
+        pattern: [
+            '#FF7F0E',
+            '#2CA02C',
+            '#D62728',
+            '#9467BD',
+        ]
+    },
+    padding: {
+        right: 15,
     },
     axis: {
         x: {
@@ -89,7 +98,7 @@ c3.generate({
 c3.generate({
     bindto: '#completitud-deudores',
     size: {
-        height: 160,
+        height: 180,
     },
     data: {
         columns: [
@@ -98,7 +107,17 @@ c3.generate({
             ['Pagos', 10, 35, 50],
         ],
         type: 'bar',
-        labels: true,
+    },
+    color: {
+        pattern: [
+            '#FF7F0E',
+            '#2CA02C',
+            '#D62728',
+            '#9467BD',
+        ]
+    },
+    padding: {
+        right: 15,
     },
     axis: {
         x: {
@@ -116,20 +135,14 @@ c3.generate({
 c3.generate({
     bindto: '#cumplimiento',
     size: {
-        height: 160,
+        height: 220,
     },
     data: {
         columns: [
-            // ['Cumplidos', 45, 5, 25, 10],
             ['Cumplidos', 0.6923, 0.1111, 0.625, 0.25],
-            // ['Incumplidos', 20, 40, 15, 30],
             ['Incumplidos', 0.3076, 0.8888, 0.375, 0.75],
         ],
         type: 'bar',
-        labels: {
-            // format: d3.format('p'),
-            format: function(value) {return (value * 100).toFixed(2) + '%'},
-        },
         order: 'desc',
         groups: [
             [
@@ -144,12 +157,16 @@ c3.generate({
             '#DDDDDD',
         ]
     },
+    padding: {
+        right: 5,
+        left: 35,
+    },
     axis: {
         x: {
             categories:[
-                'Emisiones',
-                'Recepciones',
-                'Aceptaciones',
+                'Emisión',
+                'Recepción',
+                'Aceptación',
                 'Pagos',
             ],
             type: 'category'

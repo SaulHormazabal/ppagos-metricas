@@ -22,6 +22,57 @@
             font-size: 1em;
         }
 
+        th {
+            white-space: nowrap;
+        }
+
+
+        .panel-body.row {
+            padding: 0 !important;
+            overflow: hidden;
+        }
+
+        .chart {
+            box-shadow: 1px 0px 0px #DDD;
+        }
+
+        .detail {
+        }
+
+        .detail .table {
+            margin: 0;
+        }
+
+        .color-blue {
+            color: #1F77B4;
+        }
+
+        .color-grey {
+            color: #DDDDDD;
+        }
+
+        .color-orange {
+            color: #FF7F0E;
+        }
+
+        .color-green {
+            color: #2CA02C;
+        }
+
+        .color-red {
+            color: #D62728;
+        }
+
+        .color-purple {
+            color: #9467BD;
+        }
+
+        @media (min-width: 768px) {
+            .detail {
+                padding-left: 0 !important;
+            }
+        }
+
     </style>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
@@ -32,44 +83,54 @@
     <div class="container-fluid">
 
         <div class="page-header">
-            <h1 class="text-center">Metricas Portal de Pagos</h1>
+            <h1 class="text-center">Métricas Portal de Pagos</h1>
         </div>
 
+        <br>
+
         <div class="row">
-            <form id="filter" class="col-lg-2 col-lg-offset-5 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2" action="">
 
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label class="control-label text-center" for="">Tipo de periodo</label>
-                        <select class="form-control" name="type" id="">
-                            <option value="">Año</option>
-                            <option value="" selected>Mes</option>
-                            <option value="">Otro</option>
-                        </select>
+            <p class="col-xs-12">
+                <b>Métricas para la ventana de facturación correspondiente a:</b>
+            </p>
+
+            <form id="filter" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" action="">
+                <div class="row">
+
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label class="control-label text-center" for="">Tipo de periodo</label>
+                            <select class="form-control" name="type" id="">
+                                <option value="">Año</option>
+                                <option value="" selected>Mes</option>
+                                <option value="">Otro</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
 
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label class="control-label text-center" for="">Periodo</label>
-                        <select class="form-control" name="type" id="">
-                            <option value="">Ene17</option>
-                            <option value="">Feb17</option>
-                            <option value="">Mar17</option>
-                            <option value="">Abr17</option>
-                            <option value="">May17</option>
-                            <option value="">Jun17</option>
-                            <option value="">Jul17</option>
-                            <option value="" selected>Ago17</option>
-                            <option value="">Sep17</option>
-                            <option value="">Oct17</option>
-                            <option value="">Nov17</option>
-                            <option value="">Dic17</option>
-                        </select>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label class="control-label text-center" for="">Periodo</label>
+                            <select class="form-control" name="type" id="">
+                                <option value="">Ene17</option>
+                                <option value="">Feb17</option>
+                                <option value="">Mar17</option>
+                                <option value="">Abr17</option>
+                                <option value="">May17</option>
+                                <option value="">Jun17</option>
+                                <option value="">Jul17</option>
+                                <option value="" selected>Ago17</option>
+                                <option value="">Sep17</option>
+                                <option value="">Oct17</option>
+                                <option value="">Nov17</option>
+                                <option value="">Dic17</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </form>
+
         </div>
 
         <div class="page-header">
@@ -78,135 +139,165 @@
 
         <div class="row">
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-md-12 col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">Transferencias Económicas de Energía</div>
-                    <div class="panel-body">
-                        <div id="cierres-trans"></div>
+
+                    <div class="panel-body row">
+
+                        <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                            <div id="cierres-trans"></div>
+                        </div>
+
+                        <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center">15 días</th>
+                                        <th class="text-center">30 días</th>
+                                        <th class="text-center">45 días</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="color-blue">◼</span> Cerrados</td>
+                                        <td class="text-center">60%</td>
+                                        <td class="text-center">70%</td>
+                                        <td class="text-center">80%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-grey">◼</span> Abiertos</td>
+                                        <td class="text-center">40%</td>
+                                        <td class="text-center">30%</td>
+                                        <td class="text-center">20%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-                    <table class="table table-condensed">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th class="text-center">15 días</th>
-                                <th class="text-center">30 días</th>
-                                <th class="text-center">45 días</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Abiertos</td>
-                                <td class="text-center">80</td>
-                                <td class="text-center">60</td>
-                                <td class="text-center">40</td>
-                            </tr>
-                            <tr>
-                                <td>Cerrados</td>
-                                <td class="text-center">120</td>
-                                <td class="text-center">140</td>
-                                <td class="text-center">160</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-md-12 col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">Recaudación por Ingresos Tarifarios Troncales de Energía</div>
-                    <div class="panel-body">
-                        <div id="cierres-recaudacion"></div>
+                    <div class="panel-body row">
+
+                        <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                            <div id="cierres-recaudacion"></div>
+                        </div>
+
+                        <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center">15 días</th>
+                                        <th class="text-center">30 días</th>
+                                        <th class="text-center">45 días</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="color-blue">◼</span> Cerrados</td>
+                                        <td class="text-center">60%</td>
+                                        <td class="text-center">70%</td>
+                                        <td class="text-center">80%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-grey">◼</span> Abiertos</td>
+                                        <td class="text-center">40%</td>
+                                        <td class="text-center">30%</td>
+                                        <td class="text-center">20%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
                     </div>
-                    <table class="table table-condensed">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th class="text-center">15 días</th>
-                                <th class="text-center">30 días</th>
-                                <th class="text-center">45 días</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Abiertos</td>
-                                <td class="text-center">80</td>
-                                <td class="text-center">60</td>
-                                <td class="text-center">40</td>
-                            </tr>
-                            <tr>
-                                <td>Cerrados</td>
-                                <td class="text-center">120</td>
-                                <td class="text-center">140</td>
-                                <td class="text-center">160</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-md-12 col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">Balance de Potencia</div>
-                    <div class="panel-body">
-                        <div id="cierres-balance"></div>
+                    <div class="panel-body row">
+
+                        <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                            <div id="cierres-balance"></div>
+                        </div>
+
+                        <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center">15 días</th>
+                                        <th class="text-center">30 días</th>
+                                        <th class="text-center">45 días</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="color-blue">◼</span> Cerrados</td>
+                                        <td class="text-center">60%</td>
+                                        <td class="text-center">70%</td>
+                                        <td class="text-center">80%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-grey">◼</span> Abiertos</td>
+                                        <td class="text-center">40%</td>
+                                        <td class="text-center">30%</td>
+                                        <td class="text-center">20%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-                    <table class="table table-condensed">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th class="text-center">15 días</th>
-                                <th class="text-center">30 días</th>
-                                <th class="text-center">45 días</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Abiertos</td>
-                                <td class="text-center">80</td>
-                                <td class="text-center">60</td>
-                                <td class="text-center">40</td>
-                            </tr>
-                            <tr>
-                                <td>Cerrados</td>
-                                <td class="text-center">120</td>
-                                <td class="text-center">140</td>
-                                <td class="text-center">160</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="col-md-12 col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">Servicios Complementarios</div>
-                    <div class="panel-body">
-                        <div id="cierres-servicios"></div>
+                    <div class="panel-body row">
+
+                        <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                            <div id="cierres-servicios"></div>
+                        </div>
+
+                        <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="text-center">15 días</th>
+                                        <th class="text-center">30 días</th>
+                                        <th class="text-center">45 días</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="color-blue">◼</span> Cerrados</td>
+                                        <td class="text-center">60%</td>
+                                        <td class="text-center">70%</td>
+                                        <td class="text-center">80%</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-grey">◼</span> Abiertos</td>
+                                        <td class="text-center">40%</td>
+                                        <td class="text-center">30%</td>
+                                        <td class="text-center">20%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-                    <table class="table table-condensed">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th class="text-center">15 días</th>
-                                <th class="text-center">30 días</th>
-                                <th class="text-center">45 días</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Abiertos</td>
-                                <td class="text-center">80</td>
-                                <td class="text-center">60</td>
-                                <td class="text-center">40</td>
-                            </tr>
-                            <tr>
-                                <td>Cerrados</td>
-                                <td class="text-center">120</td>
-                                <td class="text-center">140</td>
-                                <td class="text-center">160</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
 
@@ -220,87 +311,101 @@
 
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">Acreedores</div>
-                    <div class="panel-body">
-                        <div id="completitud-acreedores"></div>
+                    <div class="panel-body row">
+
+                        <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-8">
+                            <div id="completitud-acreedores"></div>
+                        </div>
+
+                        <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Informes</th>
+                                        <th class="text-center">15 días</th>
+                                        <th class="text-center">30 días</th>
+                                        <th class="text-center">45 días</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="color-orange">◼</span> Emisión de los DTE</td>
+                                        <td class="text-center">50</td>
+                                        <td class="text-center">45</td>
+                                        <td class="text-center">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-green">◼</span> Recepción de los DTE</td>
+                                        <td class="text-center">5</td>
+                                        <td class="text-center">20</td>
+                                        <td class="text-center">40</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-red">◼</span> Aceptación del Servicio</td>
+                                        <td class="text-center">20</td>
+                                        <td class="text-center">40</td>
+                                        <td class="text-center">50</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-purple">◼</span> Pagos</td>
+                                        <td class="text-center">10</td>
+                                        <td class="text-center">35</td>
+                                        <td class="text-center">50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-                    <table class="table table-condensed">
-                        <thead>
-                            <tr>
-                                <th>Informes</th>
-                                <th class="text-center">15 días</th>
-                                <th class="text-center">30 días</th>
-                                <th class="text-center">45 días</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Emisión de los DTE</td>
-                                <td class="text-center">50</td>
-                                <td class="text-center">45</td>
-                                <td class="text-center">5</td>
-                            </tr>
-                            <tr>
-                                <td>Recepción de los DTE</td>
-                                <td class="text-center">5</td>
-                                <td class="text-center">20</td>
-                                <td class="text-center">40</td>
-                            </tr>
-                            <tr>
-                                <td>Aceptación del Servicio</td>
-                                <td class="text-center">20</td>
-                                <td class="text-center">40</td>
-                                <td class="text-center">50</td>
-                            </tr>
-                            <tr>
-                                <td>Pagos</td>
-                                <td class="text-center">10</td>
-                                <td class="text-center">35</td>
-                                <td class="text-center">50</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">Deudores</div>
-                    <div class="panel-body">
-                        <div id="completitud-deudores"></div>
+                    <div class="panel-body row">
+
+                        <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-8">
+                            <div id="completitud-deudores"></div>
+                        </div>
+
+                        <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Informes</th>
+                                        <th class="text-center">15 días</th>
+                                        <th class="text-center">30 días</th>
+                                        <th class="text-center">45 días</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="color-orange">◼</span> Recepción de los DTE</td>
+                                        <td class="text-center">5</td>
+                                        <td class="text-center">20</td>
+                                        <td class="text-center">40</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-green">◼</span> Aceptación del Servicio</td>
+                                        <td class="text-center">20</td>
+                                        <td class="text-center">40</td>
+                                        <td class="text-center">50</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="color-red">◼</span> Pagos</td>
+                                        <td class="text-center">10</td>
+                                        <td class="text-center">35</td>
+                                        <td class="text-center">50</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-                    <table class="table table-condensed">
-                        <thead>
-                            <tr>
-                                <th>Informes</th>
-                                <th class="text-center">15 días</th>
-                                <th class="text-center">30 días</th>
-                                <th class="text-center">45 días</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Recepción de los DTE</td>
-                                <td class="text-center">5</td>
-                                <td class="text-center">20</td>
-                                <td class="text-center">40</td>
-                            </tr>
-                            <tr>
-                                <td>Aceptación del Servicio</td>
-                                <td class="text-center">20</td>
-                                <td class="text-center">40</td>
-                                <td class="text-center">50</td>
-                            </tr>
-                            <tr>
-                                <td>Pagos</td>
-                                <td class="text-center">10</td>
-                                <td class="text-center">35</td>
-                                <td class="text-center">50</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
 
@@ -312,43 +417,50 @@
 
         <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">Cumplimiento de fechas</div>
-                    <div class="panel-body">
-                        <div id="cumplimiento"></div>
+                    <div class="panel-body row">
+
+                        <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-8">
+                            <div id="cumplimiento"></div>
+                        </div>
+
+                        <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Informes</th>
+                                        <th class="text-center"><span class="color-blue">◼</span> Cumplidos</th>
+                                        <th class="text-center"><span class="color-grey">◼</span> Incumplidos</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Emisión de los DTE</td>
+                                        <td class="text-center">69.23%</td>
+                                        <td class="text-center">30.76%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Recepción de los DTE</td>
+                                        <td class="text-center">11.11%</td>
+                                        <td class="text-center">88.88%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Aceptación del Servicio</td>
+                                        <td class="text-center">62.5%</td>
+                                        <td class="text-center">37.5%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pagos</td>
+                                        <td class="text-center">25%</td>
+                                        <td class="text-center">75%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-                    <table class="table table-condensed">
-                        <thead>
-                            <tr>
-                                <th>Informes</th>
-                                <th class="text-center">Cumplidos <span style="color: #1F77B4">●</span></th>
-                                <th class="text-center">Incumplidos <span style="color: #CCCCCC">●</span></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Emisión de los DTE</td>
-                                <td class="text-center">45</td>
-                                <td class="text-center">20</td>
-                            </tr>
-                            <tr>
-                                <td>Recepción de los DTE</td>
-                                <td class="text-center">5</td>
-                                <td class="text-center">40</td>
-                            </tr>
-                            <tr>
-                                <td>Aceptación del Servicio</td>
-                                <td class="text-center">25</td>
-                                <td class="text-center">15</td>
-                            </tr>
-                            <tr>
-                                <td>Pagos</td>
-                                <td class="text-center">10</td>
-                                <td class="text-center">30</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
             </div>
 

@@ -88,48 +88,107 @@
 
         <br>
 
+        <div class="page-header">
+            <h2>Ventanas de facturación</h2>
+        </div>
+
         <div class="row">
 
-            <p class="col-xs-12">
-                <b>Métricas para la ventana de facturación correspondiente a:</b>
-            </p>
+            <div class="col-lg-6 col-xs-12">
+                <p>
+                    <b>Métricas para las ventanas de facturación correspondiente a:</b>
+                </p>
 
-            <form id="filter" class="col-lg-3 col-md-4 col-sm-6 col-xs-12" action="">
-                <div class="row">
+                <form id="filter" action="">
+                    <div class="row">
 
-                    <div class="col-xs-6">
-                        <div class="form-group">
-                            <label class="control-label text-center" for="">Tipo de periodo</label>
-                            <select class="form-control" name="type" id="">
-                                <option value="">Año</option>
-                                <option value="" selected>Mes</option>
-                                <option value="">Otro</option>
-                            </select>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label text-center" for="">Tipo de periodo</label>
+                                <select class="form-control" name="type" id="">
+                                    <option value="">Año</option>
+                                    <option value="" selected>Mes</option>
+                                    <option value="">Otro</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="col-xs-6">
-                        <div class="form-group">
-                            <label class="control-label text-center" for="">Periodo</label>
-                            <select class="form-control" name="type" id="">
-                                <option value="">Ene17</option>
-                                <option value="">Feb17</option>
-                                <option value="">Mar17</option>
-                                <option value="">Abr17</option>
-                                <option value="">May17</option>
-                                <option value="">Jun17</option>
-                                <option value="">Jul17</option>
-                                <option value="" selected>Ago17</option>
-                                <option value="">Sep17</option>
-                                <option value="">Oct17</option>
-                                <option value="">Nov17</option>
-                                <option value="">Dic17</option>
-                            </select>
+                        <div class="col-xs-6">
+                            <div class="form-group">
+                                <label class="control-label text-center" for="">Periodo</label>
+                                <select class="form-control" name="type" id="">
+                                    <option value="">Ene17</option>
+                                    <option value=""selected>Feb17</option>
+                                    <option value="">Mar17</option>
+                                    <option value="">Abr17</option>
+                                    <option value="">May17</option>
+                                    <option value="">Jun17</option>
+                                    <option value="">Jul17</option>
+                                    <option value="">Ago17</option>
+                                    <option value="">Sep17</option>
+                                    <option value="">Oct17</option>
+                                    <option value="">Nov17</option>
+                                    <option value="">Dic17</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="col-lg-6 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Lista de ventanas de facturación</div>
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>Fecha de Creación</th>
+                                <th>Concepto</th>
+                                <th>Nemotécnico</th>
+                                <th>Período Inicial</th>
+                                <th>Período Final</th>
+                                <th>Cuadros</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>04/04/2017</td>
+                                <td>Servicios Complementarios</td>
+                                <td>SIC_[SSCC][Feb17]</td>
+                                <td>Feb17</td>
+                                <td>Feb17</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>04/04/2017</td>
+                                <td>Balance de Potencia</td>
+                                <td>SIC_[BP__][Feb17]</td>
+                                <td>Feb17</td>
+                                <td>Feb17</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>04/04/2017</td>
+                                <td>Recaudación por Ingresos Tarifarios Troncales de Energía</td>
+                                <td>SIC_[ITTE][Feb17]</td>
+                                <td>Feb17</td>
+                                <td>Feb17</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>04/04/2017</td>
+                                <td>Transferencias Económicas de Energía</td>
+                                <td>SIC_[TEE][Feb17]</td>
+                                <td>Feb17</td>
+                                <td>Feb17</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </form>
+            </div>
 
         </div>
 

@@ -8,6 +8,21 @@
 
     <style>
 
+        body {
+            padding-top: 70px;
+        }
+
+
+        h2 {
+            font-size: 1em;
+        }
+
+
+        th {
+            white-space: nowrap;
+        }
+
+
         .charts {
             display: flex;
         }
@@ -18,14 +33,17 @@
         }
 
 
-        h2 {
-            font-size: 1em;
+        .navbar-brand {
+            padding: 10px !important;
         }
 
-        th {
-            white-space: nowrap;
+        .navbar-brand img {
+            max-height: 30px;
         }
 
+        .navbar li a.active {
+            color: #FAAF3E !important;
+        }
 
         .panel-body.row {
             padding: 0 !important;
@@ -33,7 +51,6 @@
         }
 
         .chart {
-            box-shadow: 1px 0px 0px #DDD;
         }
 
         .detail {
@@ -67,10 +84,30 @@
             color: #9467BD;
         }
 
+        .panel-green {
+            border: 1px solid #00A4B2 !important;
+            border-radius: 0 !important;
+        }
+
+        .panel-green .panel-heading {
+            background-color: #00A4B2 !important;
+            border-radius: 0 !important;
+            color: #FFFFFF;
+        }
+
         @media (min-width: 768px) {
+
+            .chart {
+                border-right: 1px solid #00A4B2;
+                position: relative;
+                right: -1px;
+            }
+
             .detail {
                 padding-left: 0 !important;
+                border-left: 1px solid #00A4B2;
             }
+
         }
 
     </style>
@@ -81,6 +118,100 @@
 <body>
 
     <div class="container-fluid">
+
+        <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed"><i class="fa fa-bars"></i>
+                    </button>
+                    <a href="/" class="navbar-brand">
+                        <img src="https://staging-ppagos-sic.coordinadorelectrico.cl/static/cdec_ppagos/images/cdecsic-logo-header.png">
+
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle active_menu">
+                                Administración
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a id="test" href="/participantes/" class="active_menu">
+                                        Participantes
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/usuarios/nuevo" class="js-modal">
+                                        Nuevo usuario
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle ">
+                                Pagos
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="/pagos/ventanas" class="">
+                                        Ventanas de Facturación
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/pagos/instrucciones/" class="">
+                                        Instrucciones de Pago
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/pagos/" class="">
+                                        Pagos
+                                    </a>
+                                </li>
+                                <li>
+
+                                    <a class="" href="/pagos/wizard/acreedor">
+                                        Informar Pago Como Acreedor
+                                    </a>
+
+                                </li>
+                                <li>
+
+                                    <a class="" href="/pagos/wizard/deudor">
+                                        Informar Pago Como Deudor
+                                    </a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="active" href="#">Métricas</a>
+                        </li>
+
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li>
+                            <input type="hidden" name="csrfmiddlewaretoken" value="0t4sztIBw2RvX7j4dgH0us5dJj9jrp1XUxj70rrZgQBvN5e9f8KS8ujJBDHdApXv">
+                            <a href="/usuarios/1239" class="js-modal">Carlos Salazar</a>
+                        </li>
+
+                        <li><a href="/logout">Salir</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <div class="page-header">
             <h1 class="text-center">Métricas Portal de Pagos</h1>
@@ -139,7 +270,7 @@
             </div>
 
             <div class="col-lg-6 col-xs-12">
-                <div class="panel panel-default">
+                <div class="panel panel-green">
                     <div class="panel-heading">Lista de ventanas de facturación</div>
                     <table class="table table-condensed table-hover">
                         <thead>
@@ -199,7 +330,7 @@
         <div class="row">
 
             <div class="col-md-12 col-lg-6">
-                <div class="panel panel-default">
+                <div class="panel panel-green">
                     <div class="panel-heading">Transferencias Económicas de Energía</div>
 
                     <div class="panel-body row">
@@ -241,7 +372,7 @@
             </div>
 
             <div class="col-md-12 col-lg-6">
-                <div class="panel panel-default">
+                <div class="panel panel-green">
                     <div class="panel-heading">Recaudación por Ingresos Tarifarios Troncales de Energía</div>
                     <div class="panel-body row">
 
@@ -281,7 +412,7 @@
             </div>
 
             <div class="col-md-12 col-lg-6">
-                <div class="panel panel-default">
+                <div class="panel panel-green">
                     <div class="panel-heading">Balance de Potencia</div>
                     <div class="panel-body row">
 
@@ -321,7 +452,7 @@
             </div>
 
             <div class="col-md-12 col-lg-6">
-                <div class="panel panel-default">
+                <div class="panel panel-green">
                     <div class="panel-heading">Servicios Complementarios</div>
                     <div class="panel-body row">
 
@@ -371,7 +502,7 @@
         <div class="row">
 
             <div class="col-md-12">
-                <div class="panel panel-default">
+                <div class="panel panel-green">
                     <div class="panel-heading">Acreedores</div>
                     <div class="panel-body row">
 
@@ -423,7 +554,7 @@
             </div>
 
             <div class="col-md-12">
-                <div class="panel panel-default">
+                <div class="panel panel-green">
                     <div class="panel-heading">Deudores</div>
                     <div class="panel-body row">
 
@@ -477,7 +608,7 @@
         <div class="row">
 
             <div class="col-md-12">
-                <div class="panel panel-default">
+                <div class="panel panel-green">
                     <div class="panel-heading">Cumplimiento de fechas</div>
                     <div class="panel-body row">
 

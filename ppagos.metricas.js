@@ -1,3 +1,8 @@
+$('select').select2({
+  theme: 'bootstrap'
+});
+
+
 // CIERRE DE INSTRUCCIONES DE PAGO
 // -------------------------------
 

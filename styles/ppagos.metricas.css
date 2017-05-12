@@ -1,0 +1,135 @@
+body {
+    padding-top: 70px;
+}
+
+
+h2 {
+    font-size: 1em;
+}
+
+
+th {
+    white-space: nowrap;
+}
+
+
+/*
+CUSTOM BOOTSTRAP
+*/
+
+
+.navbar li a.active {
+    color: #FAAF3E !important;
+}
+
+
+.navbar-brand {
+    padding: 10px !important;
+}
+
+
+.navbar-brand img {
+    max-height: 30px;
+}
+
+
+.pagination > li > a,
+.pagination > li > span {
+    color: #00A4B2 !important;
+}
+
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: #00A4B2 !important;
+    border-color: #00A4B2 !important;
+    color: #FFF !important;
+}
+
+
+.panel-body.row {
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+
+.panel-green {
+    border: 1px solid #00A4B2 !important;
+    border-radius: 0 !important;
+}
+
+.panel-green .panel-heading {
+    background-color: #00A4B2 !important;
+    border-radius: 0 !important;
+    color: #FFFFFF;
+}
+
+
+/*
+CHARTS
+*/
+
+
+.charts {
+    display: flex;
+}
+
+
+.charts__item {
+    flex: 1;
+}
+
+
+.color-blue {
+    color: #1F77B4;
+}
+
+
+.color-grey {
+    color: #DDDDDD;
+}
+
+
+.color-orange {
+    color: #FF7F0E;
+}
+
+
+.color-green {
+    color: #2CA02C;
+}
+
+
+.color-red {
+    color: #D62728;
+}
+
+
+.color-purple {
+    color: #9467BD;
+}
+
+
+.detail .table {
+    margin: 0;
+}
+
+
+@media (min-width: 768px) {
+
+    .chart {
+        border-right: 1px solid #00A4B2;
+        position: relative;
+        right: -1px;
+    }
+
+    .detail {
+        border-left: 1px solid #00A4B2;
+        padding-left: 0 !important;
+    }
+
+}

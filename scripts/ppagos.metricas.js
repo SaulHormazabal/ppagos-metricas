@@ -79,6 +79,21 @@ $type.on('change', function (e) {
 });
 
 
+
+$('#form__creditor').select2({
+    data: ['Todos'].concat(participants),
+    placeholder: '-----',
+});
+
+
+
+$('#form__debtor').select2({
+    data: ['Todos'].concat(participants),
+    placeholder: '-----',
+});
+
+
+
 // CIERRE DE INSTRUCCIONES DE PAGO
 // -------------------------------
 

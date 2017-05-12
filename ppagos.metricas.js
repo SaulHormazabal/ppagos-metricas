@@ -1,5 +1,88 @@
-$('select').select2({
-  theme: 'bootstrap'
+$.fn.select2.defaults.set('theme', 'bootstrap');
+
+var years = [
+    2014,
+    2015,
+    2016,
+    2017,
+];
+
+
+var months = [
+    'Ene',
+    'Feb',
+    'Mar',
+    'Abr',
+    'May',
+    'Jun',
+    'Jul',
+    'Ago',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dic',
+];
+
+
+var year_periods = years.map((year) => {
+    return {id: year, text: year};
+});
+
+
+var month_periods = years.reduce((stream, year) => {
+    year = year.toString().substr(2);
+
+    for (let month of months)
+        stream.push({id: month + year, text: month + year});
+
+    return stream;
+
+}, []);
+
+
+var $type = $('#form__type').select2({
+    data: [
+        {id: 'year', text: 'año'},
+        {id: 'month', text: 'mes', selected: true},
+        {id: 'other', text: 'otro'},
+    ],
+});
+
+
+var $period = $('#form__period').select2({
+    data: month_periods,
+    placeholder: '-----',
+});
+
+$period.val('Feb17').trigger('change');
+
+$type.on('change', function (e) {
+
+    $period.empty();
+
+    if (e.target.value === 'year')
+        $period.select2({
+            data: year_periods,
+            multiple: false,
+            placeholder: '-----',
+        });
+
+    else if (e.target.value === 'month')
+        $period.select2({
+            data: month_periods,
+            multiple: false,
+            placeholder: '-----',
+        });
+
+    else if (e.target.value === 'other')
+        $period.select2({
+            data: month_periods,
+            multiple: true,
+            placeholder: '-----',
+        });
+
+    $period.val(null).trigger('change');
+
 });
 
 

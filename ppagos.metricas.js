@@ -138,7 +138,7 @@ c3.generate({
 
 
 c3.generate({
-    bindto: '#cumplimiento',
+    bindto: '#cumplimiento-acreedor',
     size: {
         height: 220,
     },
@@ -170,6 +170,59 @@ c3.generate({
         x: {
             categories:[
                 'Emisión',
+                'Recepción',
+                'Aceptación',
+                'Pagos',
+            ],
+            type: 'category'
+        },
+        y: {
+            padding: 10,
+            tick: {
+                format: d3.format('p')
+            },
+        },
+    },
+    tooltip: {
+        format: {
+            value: function(value) {return (value * 100).toFixed(2) + '%';},
+        }
+    }
+});
+
+
+c3.generate({
+    bindto: '#cumplimiento-deudor',
+    size: {
+        height: 220,
+    },
+    data: {
+        columns: [
+            ['Cumplidos', 0.1111, 0.625, 0.25],
+            ['Incumplidos', 0.8888, 0.375, 0.75],
+        ],
+        type: 'bar',
+        order: 'desc',
+        groups: [
+            [
+                'Cumplidos',
+                'Incumplidos',
+            ]
+        ],
+    },
+    color: {
+        pattern: [
+            '#1F77B4',
+            '#DDDDDD',
+        ]
+    },
+    padding: {
+        right: 5,
+        left: 35,
+    },
+    axis: {
+        x: {
+            categories:[
                 'Recepción',
                 'Aceptación',
                 'Pagos',

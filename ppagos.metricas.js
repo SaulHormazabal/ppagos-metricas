@@ -1,3 +1,19 @@
+// PAGINATION
+// -------------------------------
+
+
+$('.pagination a').on('click', function(e) {
+    e.preventDefault();
+
+    $(this).parents('.pagination').find('li.active').removeClass('active');
+    $(this).parents('li:first').addClass('active');
+});
+
+
+// SELECT2
+// -------------------------------
+
+
 $.fn.select2.defaults.set('theme', 'bootstrap');
 
 var years = [

@@ -16,29 +16,6 @@ $('.pagination a').on('click', function(e) {
 
 $.fn.select2.defaults.set('theme', 'bootstrap');
 
-var years = [
-    2014,
-    2015,
-    2016,
-    2017,
-];
-
-
-var months = [
-    'Ene',
-    'Feb',
-    'Mar',
-    'Abr',
-    'May',
-    'Jun',
-    'Jul',
-    'Ago',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dic',
-];
-
 
 var year_periods = years.map((year) => {
     return {id: year, text: year};

@@ -15,7 +15,7 @@ $('.pagination a').on('click', function(e) {
 
 
 $.fn.select2.defaults.set('theme', 'bootstrap');
-
+$.fn.select2.defaults.set('width', '100%');
 
 var year_periods = years.map((year) => {
     return {id: year, text: year};

@@ -289,8 +289,8 @@ c3.generate({
     },
     data: {
         columns: [
-            ['Cumplidos', 0.1111, 0.625, 0.25],
-            ['Incumplidos', 0.8888, 0.375, 0.75],
+            ['Cumplidos', 0.625, 0.25],
+            ['Incumplidos', 0.375, 0.75],
         ],
         type: 'bar',
         order: 'desc',
@@ -314,7 +314,6 @@ c3.generate({
     axis: {
         x: {
             categories:[
-                'Recepción',
                 'Aceptación',
                 'Pagos',
             ],

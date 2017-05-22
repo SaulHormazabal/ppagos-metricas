@@ -206,7 +206,6 @@ c3.generate({
     },
     color: {
         pattern: [
-            '#FF7F0E',
             '#2CA02C',
             '#D62728',
             '#9467BD',

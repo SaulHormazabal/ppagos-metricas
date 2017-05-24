@@ -119,6 +119,31 @@ CHARTS
 }
 
 
+.c3-region.incomplete-area {
+    fill: #D62728;
+    fill: #FF0000;
+}
+
+
+.c3-region.complete-area {
+    fill: #2CA02C;
+}
+
+
+.c3-region.complete-area rect,
+.c3-region.incomplete-area rect {
+    fill-opacity: 0.25 !important;
+}
+
+.c3-xgrid-line.stroke-red text {
+    fill: #D62728;
+}
+
+.c3-xgrid-line.stroke-red line {
+    stroke: #D62728;
+}
+
+
 @media (min-width: 768px) {
 
     .chart {

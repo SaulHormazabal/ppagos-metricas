@@ -1,3 +1,75 @@
+// COMPLETITUD DEL PROCESO
+// -----------------------
+
+c3.generate({
+    bindto: '#completitud-acreedores',
+    size: {
+        height: 180,
+    },
+    data: {
+        columns: [
+            ['Emisiones', 50, 45, 5],
+            ['Recepciones', 5, 20, 40],
+            ['Aceptaciones', 20, 40, 50],
+            ['Pagos', 10, 35, 50],
+        ],
+        type: 'bar',
+    },
+    color: {
+        pattern: [
+            '#FF7F0E',
+            '#2CA02C',
+            '#D62728',
+            '#9467BD',
+        ]
+    },
+    padding: {
+        right: 15,
+    },
+    axis: {
+        x: {
+            categories:['15 días', '30 días', '45 días'],
+            type: 'category'
+        }
+    }
+});
+
+
+c3.generate({
+    bindto: '#completitud-deudores',
+    size: {
+        height: 180,
+    },
+    data: {
+        columns: [
+            ['Recepciones', 5, 20, 40],
+            ['Aceptaciones', 20, 40, 50],
+            ['Pagos', 10, 35, 50],
+        ],
+        type: 'bar',
+    },
+    color: {
+        pattern: [
+            '#2CA02C',
+            '#D62728',
+            '#9467BD',
+        ]
+    },
+    padding: {
+        right: 15,
+    },
+    axis: {
+        x: {
+            categories:['15 días', '30 días', '45 días'],
+            type: 'category'
+        }
+    }
+});
+
+
+// PRUEBA: EVOLUCION 45
+// --------------------
+
 var completitud_params = {
     size: {
         height: 180,

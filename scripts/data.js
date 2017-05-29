@@ -22,6 +22,18 @@ var months = [
 ];
 
 
+var billing_windows = [
+    'SIC_[SSCC][Feb17]',
+    'SIC_[BP__][Feb17]',
+    'SIC_[ITTE][Feb17]',
+    'SIC_[TEE][Feb17]',
+    'SIC_[SSCC][Ene17]',
+    'SIC_[BP__][Ene17]',
+    'SIC_[ITTE][Ene17]',
+    'SIC_[TEE][Ene17]',
+]
+
+
 var participants = [
     'AJTE',
     'Abengoa',

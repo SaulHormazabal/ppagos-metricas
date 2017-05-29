@@ -79,6 +79,11 @@ $type.on('change', function (e) {
 });
 
 
+$('#form__billing-window').select2({
+    data: ['Todos'].concat(billing_windows),
+    placeholder: '-----',
+});
+
 
 $('#form__creditor').select2({
     data: ['Todos'].concat(participants),
@@ -86,12 +91,10 @@ $('#form__creditor').select2({
 });
 
 
-
 $('#form__debtor').select2({
     data: ['Todos'].concat(participants),
     placeholder: '-----',
 });
-
 
 
 // CIERRE DE INSTRUCCIONES DE PAGO

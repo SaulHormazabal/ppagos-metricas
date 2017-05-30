@@ -31,7 +31,28 @@ var billing_windows = [
     'SIC_[BP__][Ene17]',
     'SIC_[ITTE][Ene17]',
     'SIC_[TEE][Ene17]',
-]
+];
+
+
+var billing_types = [
+    'Transferencias Económicas de Energía',
+    'Recaudación por Ingresos Tarifarios Troncales de Energía',
+    'Balance de Potencia',
+    'Servicios Complementarios',
+];
+
+
+var payment_matrices = [
+    'SIC_[SSCC][Feb17][L][V01]',
+    'SIC_[SSCC][Ene17][L][V01]',
+    'SIC_[BP__][Ene17][L][V01]',
+    'SIC_[ITTE][Ene17][L][V01]',
+    'SIC_[TEE][Ene17][L][V01]',
+    'SIC_[SSCC][Feb17][R][V01]',
+    'SIC_[BP__][Feb17][L][V01]',
+    'SIC_[ITTE][Feb17][L][V01]',
+    'SIC_[TEE][Feb17][L][V01]',
+];
 
 
 var participants = [

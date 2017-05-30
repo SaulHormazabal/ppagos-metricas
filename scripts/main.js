@@ -83,6 +83,17 @@ $('#form__billing-window').select2({
 });
 
 
+$('#form__billing-type').select2({
+    data: ['Todos'].concat(billing_types),
+    placeholder: '-----',
+});
+
+$('#form__payment-matrix').select2({
+    data: ['Todos'].concat(payment_matrices),
+    placeholder: '-----',
+});
+
+
 $('#form__creditor').select2({
     data: ['Todos'].concat(participants),
     placeholder: '-----',

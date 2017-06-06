@@ -9,7 +9,7 @@
 
     <div class="row">
 
-        <div class="col-lg-2 col-lg-offset-4 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3 col-xs-6">
+        <div class="col-lg-2 col-lg-offset-4 col-sm-4 col-sm-offset-2 col-md-3 col-md-offset-3 col-xs-10 col-xs-offset-1">
 
             <a class="btn btn-info col-xs-12" href="cumplimiento.html">
 
@@ -22,9 +22,11 @@
 
             </a>
 
+            <p class="col-xs-12"></p>
+
         </div>
 
-        <div class="col-lg-2 col-sm-4 col-md-3 col-xs-6">
+        <div class="col-lg-2 col-sm-4 col-md-3 col-xs-10 col-xs-offset-1">
 
             <a class="btn btn-info col-xs-12" href="completitud.html">
 
@@ -36,6 +38,8 @@
                 Completitud
 
             </a>
+
+            <p class="col-xs-12"></p>
 
         </div>
 

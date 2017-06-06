@@ -128,56 +128,6 @@
                     <td class="text-center">05/04/2017</td>
                     <td class="text-center">23/03/2017</td>
                 </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox" checked></td>
-                    <td>Transferencias Económicas de Energía</td>
-                    <td class="text-center">SIC_[SSCC][Ene17][L][V01]</td>
-                    <td class="text-center">San Juan</td>
-                    <td class="text-center">Luz del Norte</td>
-                    <td class="text-right">$8.780.190</td>
-                    <td class="text-center">05/04/2017</td>
-                    <td class="text-center">23/03/2017</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox" checked></td>
-                    <td>Balance de Potencia</td>
-                    <td class="text-center">SIC_[ITTE][Ene17][L][V01]</td>
-                    <td class="text-center">Luz del Norte</td>
-                    <td class="text-center">Colbún</td>
-                    <td class="text-right">$8.383.626</td>
-                    <td class="text-center">05/04/2017</td>
-                    <td class="text-center">23/03/2017</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox" checked></td>
-                    <td>Balance de Potencia</td>
-                    <td class="text-center">SIC_[SSCC][Ene17][R][V01]</td>
-                    <td class="text-center">Luz del Norte</td>
-                    <td class="text-center">EnorChile</td>
-                    <td class="text-right">$7.750.230</td>
-                    <td class="text-center">05/04/2017</td>
-                    <td class="text-center">23/03/2017</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox" checked></td>
-                    <td>Transferencias Económicas de Energía</td>
-                    <td class="text-center">SIC_[SSCC][Ene17][L][V01]</td>
-                    <td class="text-center">Enlasa</td>
-                    <td class="text-center">Luz del Norte</td>
-                    <td class="text-right">$8.241.044</td>
-                    <td class="text-center">05/04/2017</td>
-                    <td class="text-center">23/03/2017</td>
-                </tr>
-                <tr>
-                    <td class="text-center"><input type="checkbox" checked></td>
-                    <td>Transferencias Económicas de Energía</td>
-                    <td class="text-center">SIC_[ITTE][Ene17][L][V01]</td>
-                    <td class="text-center">Parque Eólico Los Cururos</td>
-                    <td class="text-center">Luz del Norte</td>
-                    <td class="text-right">$6.192.777</td>
-                    <td class="text-center">05/04/2017</td>
-                    <td class="text-center">23/03/2017</td>
-                </tr>
             </tbody>
         </table>
     </div>

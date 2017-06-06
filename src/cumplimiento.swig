@@ -16,6 +16,7 @@
     {% include 'templates/payment-instruction-filters.swig' %}
     {% include 'templates/close-payment-instructions.swig' %}
     {% include 'templates/fulfillment-dates.swig' %}
+    {% include 'templates/billings-vs-payments.swig' %}
 
 {% endblock content %}
 

@@ -1,3 +1,6 @@
+require('./billings-vs-payments.babel');
+
+
 // CIERRE DE INSTRUCCIONES DE PAGO
 // -------------------------------
 

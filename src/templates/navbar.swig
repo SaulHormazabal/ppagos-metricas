@@ -6,7 +6,7 @@
                 <i class="fa fa-bars"></i>
             </button>
 
-            <a href="#" class="navbar-brand">
+            <a href="index.html" class="navbar-brand">
                 <img src="https://staging-ppagos-sic.coordinadorelectrico.cl/static/cdec_ppagos/images/cdecsic-logo-header.png">
             </a>
 

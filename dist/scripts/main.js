@@ -1,3 +1,4 @@
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var years = [
     2014,
     2015,
@@ -209,3 +210,116 @@ module.exports = {
     payment_matrices: payment_matrices,
     participants: participants,
 }
+
+},{}],2:[function(require,module,exports){
+var data = require('./data.babel');
+
+
+// PAGINATION
+// -------------------------------
+
+$('.pagination a').on('click', function(e) {
+    e.preventDefault();
+
+    $(this).parents('.pagination').find('li.active').removeClass('active');
+    $(this).parents('li:first').addClass('active');
+});
+
+
+// SELECT2
+// -------------------------------
+
+$.fn.select2.defaults.set('theme', 'bootstrap');
+$.fn.select2.defaults.set('width', '100%');
+
+var year_periods = data.years.map((year) => {
+    return {id: year, text: year};
+});
+
+
+var month_periods = data.years.reduce((stream, year) => {
+    year = year.toString().substr(2);
+
+    for (let month of data.months)
+        stream.push({id: month + year, text: month + year});
+
+    return stream;
+
+}, []);
+
+
+var $type = $('#form__type').select2({
+    data: [
+        {id: 'year', text: 'año'},
+        {id: 'month', text: 'mes', selected: true},
+        {id: 'other', text: 'otro'},
+    ],
+});
+
+
+var $period = $('#form__period').select2({
+    data: month_periods,
+    placeholder: '-----',
+});
+
+$period.val('Feb17').trigger('change');
+
+$type.on('change', function (e) {
+
+    $period.empty();
+
+    if (e.target.value === 'year')
+        $period.select2({
+            data: year_periods,
+            multiple: false,
+            placeholder: '-----',
+        });
+
+    else if (e.target.value === 'month')
+        $period.select2({
+            data: month_periods,
+            multiple: false,
+            placeholder: '-----',
+        });
+
+    else if (e.target.value === 'other')
+        $period.select2({
+            data: month_periods,
+            multiple: true,
+            placeholder: '-----',
+        });
+
+    $period.val(null).trigger('change');
+
+});
+
+
+$('#form__billing-window').select2({
+    data: ['Todos'].concat(data.billing_windows),
+    placeholder: '-----',
+});
+
+
+$('#form__billing-type').select2({
+    data: ['Todos'].concat(data.billing_types),
+    placeholder: '-----',
+});
+
+$('#form__payment-matrix').select2({
+    data: ['Todos'].concat(data.payment_matrices),
+    placeholder: '-----',
+});
+
+
+$('#form__creditor').select2({
+    data: ['Todos'].concat(data.participants),
+    placeholder: '-----',
+});
+
+
+$('#form__debtor').select2({
+    data: ['Todos'].concat(data.participants),
+    placeholder: '-----',
+});
+
+},{"./data.babel":1}]},{},[2]);

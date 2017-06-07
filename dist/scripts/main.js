@@ -1,25 +1,43 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var years = [
-    2014,
-    2015,
-    2016,
-    2017,
-];
+var periods = [
+    'Ene15',
+    'Feb15',
+    'Mar15',
+    'Abr15',
+    'May15',
+    'Jun15',
+    'Jul15',
+    'Ago15',
+    'Sep15',
+    'Oct15',
+    'Nov15',
+    'Dic15',
 
+    'Ene16',
+    'Feb16',
+    'Mar16',
+    'Abr16',
+    'May16',
+    'Jun16',
+    'Jul16',
+    'Ago16',
+    'Sep16',
+    'Oct16',
+    'Nov16',
+    'Dic16',
 
-var months = [
-    'Ene',
-    'Feb',
-    'Mar',
-    'Abr',
-    'May',
-    'Jun',
-    'Jul',
-    'Ago',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dic',
+    'Ene17',
+    'Feb17',
+    'Mar17',
+    'Abr17',
+    'May17',
+    'Jun17',
+    'Jul17',
+    'Ago17',
+    'Sep17',
+    'Oct17',
+    'Nov17',
+    'Dic17',
 ];
 
 
@@ -203,8 +221,7 @@ var participants = [
 
 
 module.exports = {
-    years: years,
-    months: months,
+    periods: periods,
     billing_windows: billing_windows,
     billing_types: billing_types,
     payment_matrices: payment_matrices,
@@ -232,82 +249,53 @@ $('.pagination a').on('click', function(e) {
 $.fn.select2.defaults.set('theme', 'bootstrap');
 $.fn.select2.defaults.set('width', '100%');
 
-var year_periods = data.years.map((year) => {
-    return {id: year, text: year};
-});
-
-
-var month_periods = data.years.reduce((stream, year) => {
-    year = year.toString().substr(2);
-
-    for (let month of data.months)
-        stream.push({id: month + year, text: month + year});
-
-    return stream;
-
-}, []);
-
 
 var $type = $('#form__type').select2({
     data: [
-        {id: 'year', text: 'año'},
-        {id: 'month', text: 'mes', selected: true},
-        {id: 'other', text: 'otro'},
+        {id: 'periods', text: 'Periodo', selected: true},
+        {id: 'payment_matrices', text: 'Cuado de pago'},
+        {id: 'billing_windows', text: 'Ventana de pago'},
+        {id: 'billing_types', text: 'Concepto'},
     ],
 });
 
 
-var $period = $('#form__period').select2({
-    data: month_periods,
+let periods = ['Todos'].concat(data.periods)
+let billing_windows = ['Todos'].concat(data.billing_windows)
+let billing_types = ['Todos'].concat(data.billing_types)
+let payment_matrices = ['Todos'].concat(data.payment_matrices)
+
+
+let $filter = $('#form__filter').select2({
+    data: periods,
     placeholder: '-----',
 });
 
-$period.val('Feb17').trigger('change');
 
 $type.on('change', function (e) {
 
-    $period.empty();
+    $filter.empty();
 
-    if (e.target.value === 'year')
-        $period.select2({
-            data: year_periods,
-            multiple: false,
-            placeholder: '-----',
-        });
+    if (e.target.value === 'periods')
+        $('label.filter').text('Periodo')
 
-    else if (e.target.value === 'month')
-        $period.select2({
-            data: month_periods,
-            multiple: false,
-            placeholder: '-----',
-        });
+    else if (e.target.value === 'payment_matrices')
+        $('label.filter').text('Cuadro de pago')
 
-    else if (e.target.value === 'other')
-        $period.select2({
-            data: month_periods,
-            multiple: true,
-            placeholder: '-----',
-        });
+    else if (e.target.value === 'billing_windows')
+        $('label.filter').text('Ventana de pago')
 
-    $period.val(null).trigger('change');
-
-});
+    else if (e.target.value === 'billing_types')
+        $('label.filter').text('Concepto de pago')
 
 
-$('#form__billing-window').select2({
-    data: ['Todos'].concat(data.billing_windows),
-    placeholder: '-----',
-});
+    $filter.select2({
+        data: ['Todos'].concat(data[e.target.value]),
+        placeholder: '-----',
+    });
 
+    $filter.val('Todos').trigger('change');
 
-$('#form__billing-type').select2({
-    data: ['Todos'].concat(data.billing_types),
-    placeholder: '-----',
-});
-
-$('#form__payment-matrix').select2({
-    data: ['Todos'].concat(data.payment_matrices),
-    placeholder: '-----',
 });
 
 

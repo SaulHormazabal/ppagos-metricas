@@ -17,6 +17,7 @@
         {% include 'templates/payment-instruction-filters.swig' %}
     </div>
 
+    {% include 'templates/participant-ranking.swig' %}
     {% include 'templates/close-payment-instructions.swig' %}
     {% include 'templates/fulfillment-dates.swig' %}
     {% include 'templates/billings-vs-payments.swig' %}

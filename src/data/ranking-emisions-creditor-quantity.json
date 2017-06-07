@@ -1,0 +1,85 @@
+{
+    "count": 10,
+    "results": [
+        {
+            "ranking": 1,
+            "participant": {
+                "name": "Bellavista"
+            },
+            "total": 1335,
+            "pending": 1987
+        },
+        {
+            "ranking": 2,
+            "participant": {
+                "name": "La Montaña 1"
+            },
+            "total": 1125,
+            "pending": 1012
+        },
+        {
+            "ranking": 3,
+            "participant": {
+                "name": "AGSA"
+            },
+            "total": 3501,
+            "pending": 893
+        },
+        {
+            "ranking": 4,
+            "participant": {
+                "name": "Ucuquer"
+            },
+            "total": 874,
+            "pending": 825
+        },
+        {
+            "ranking": 5,
+            "participant": {
+                "name": "EGP del Sur SpA"
+            },
+            "total": 9855,
+            "pending": 812
+        },
+        {
+            "ranking": 6,
+            "participant": {
+                "name": "HidroMuchi"
+            },
+            "total": 7451,
+            "pending": 774
+        },
+        {
+            "ranking": 7,
+            "participant": {
+                "name": "PMGD Bureo"
+            },
+            "total": 874,
+            "pending": 684
+        },
+        {
+            "ranking": 8,
+            "participant": {
+                "name": "Contra"
+            },
+            "total": 745,
+            "pending": 604
+        },
+        {
+            "ranking": 9,
+            "participant": {
+                "name": "Eléctrica San Miguel"
+            },
+            "total": 958,
+            "pending": 554
+        },
+        {
+            "ranking": 10,
+            "participant": {
+                "name": "Hidroeléctrica Dongo"
+            },
+            "total": 745,
+            "pending": 352
+        }
+    ]
+}

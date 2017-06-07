@@ -5,19 +5,19 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         browserify: {
-            dev: {
+            options: {
+                transform: [['babelify', {presets: ['es2015']}]],
+                sourceType: 'module',
                 options: {
-                    transform: [['babelify', {presets: ['es2015']}]],
-                    sourceType: 'module',
-                    options: {
-                        external: ['jquery', 'materialize-css'],
-                    },
-                    browserifyOptions: {
-                        parserOptions: {
-                            sourceType: 'module',
-                        },
+                    external: ['jquery'],
+                },
+                browserifyOptions: {
+                    parserOptions: {
+                        sourceType: 'module',
                     },
                 },
+            },
+            dev: {
                 files: [{
                     expand: true,
                     cwd: 'src/scripts',
@@ -27,9 +27,6 @@ module.exports = function(grunt) {
                 }],
             },
             dist: {
-                options: {
-                    transform: [['babelify', {presets: ['es2015']}]],
-                },
                 files: [{
                     expand: true,
                     cwd: 'src/scripts',
@@ -37,6 +34,16 @@ module.exports = function(grunt) {
                     ext: '.js',
                     dest: 'dist/scripts',
                 }],
+            },
+        },
+
+        copy: {
+            json: {
+                expand: true,
+                cwd: 'src/data',
+                src: '*.json',
+                ext: '.json',
+                dest: 'dist/data',
             },
         },
 
@@ -151,6 +158,13 @@ module.exports = function(grunt) {
         watch: {
             options: {
                 livereload: true,
+            },
+            json: {
+                files: ['src/data/*.json'],
+                tasks: ['copy:json'],
+                options: {
+                    spawn: false,
+                },
             },
             scripts: {
                 files: ['src/scripts/**/*.babel'],

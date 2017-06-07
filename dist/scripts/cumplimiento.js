@@ -229,6 +229,7 @@ c3.generate({
 },{}],3:[function(require,module,exports){
 require('./billings-vs-payments.babel');
 require('./billings-by-types.babel');
+require('./participant-ranking.babel');
 
 
 // CIERRE DE INSTRUCCIONES DE PAGO
@@ -398,4 +399,52 @@ c3.generate({
     }
 });
 
-},{"./billings-by-types.babel":1,"./billings-vs-payments.babel":2}]},{},[3]);
+},{"./billings-by-types.babel":1,"./billings-vs-payments.babel":2,"./participant-ranking.babel":4}],4:[function(require,module,exports){
+
+let render_mount_table = function(selector, data) {
+
+    let $panel = $(selector);
+    let $tbody = $panel.find('tbody');
+
+    for (let row of data.results) {
+        let $tr = $tbody.find('template').contents('tr').clone();
+
+        $tr.find('.participant').text(row.participant.name)
+        $tr.find('.total').text('$' + row.total.toLocaleString().replace(/,/g, '.'))
+        $tr.find('.ranking').html(row.ranking)
+        $tr.find('.percentage').text((row.pending * 100 / row.total).toFixed(2) + '%')
+        $tr.find('.pending').text('$' + row.pending.toLocaleString().replace(/,/g, '.'))
+
+        $tbody.append($tr);
+
+    }
+
+}
+
+let render_quantity_table = function(selector, data) {
+
+    let $panel = $(selector);
+    let $tbody = $panel.find('tbody');
+
+    for (let row of data.results) {
+        let $tr = $tbody.find('template').contents('tr').clone();
+
+        $tr.find('.participant').text(row.participant.name)
+        $tr.find('.total').text(row.total.toLocaleString().replace(/,/g, '.'))
+        $tr.find('.ranking').html(row.ranking)
+        $tr.find('.percentage').text((row.pending * 100 / row.total).toFixed(2) + '%')
+        $tr.find('.pending').text(row.pending.toLocaleString().replace(/,/g, '.'))
+
+        $tbody.append($tr);
+
+    }
+
+}
+
+$.getJSON('/data/ranking-emisions-creditor-mount.json', render_mount_table.bind(this, '#ranking-emisions-creditor-mount'));
+$.getJSON('/data/ranking-emisions-creditor-quantity.json', render_quantity_table.bind(this, '#ranking-emisions-creditor-quantity'));
+
+$.getJSON('/data/ranking-acceptances-debtor-mount.json', render_mount_table.bind(this, '#ranking-acceptances-debtor-mount'));
+$.getJSON('/data/ranking-acceptances-debtor-quantity.json', render_quantity_table.bind(this, '#ranking-acceptances-debtor-quantity'));
+
+},{}]},{},[3]);

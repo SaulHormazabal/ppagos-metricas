@@ -166,3 +166,7 @@ CHARTS
 .text-number {
     text-align: right;
 }
+
+.text-bold {
+    font-weight: bold;
+}

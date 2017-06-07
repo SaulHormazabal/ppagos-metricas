@@ -1,25 +1,43 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var years = [
-    2014,
-    2015,
-    2016,
-    2017,
-];
+var periods = [
+    'Ene15',
+    'Feb15',
+    'Mar15',
+    'Abr15',
+    'May15',
+    'Jun15',
+    'Jul15',
+    'Ago15',
+    'Sep15',
+    'Oct15',
+    'Nov15',
+    'Dic15',
 
+    'Ene16',
+    'Feb16',
+    'Mar16',
+    'Abr16',
+    'May16',
+    'Jun16',
+    'Jul16',
+    'Ago16',
+    'Sep16',
+    'Oct16',
+    'Nov16',
+    'Dic16',
 
-var months = [
-    'Ene',
-    'Feb',
-    'Mar',
-    'Abr',
-    'May',
-    'Jun',
-    'Jul',
-    'Ago',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dic',
+    'Ene17',
+    'Feb17',
+    'Mar17',
+    'Abr17',
+    'May17',
+    'Jun17',
+    'Jul17',
+    'Ago17',
+    'Sep17',
+    'Oct17',
+    'Nov17',
+    'Dic17',
 ];
 
 
@@ -203,8 +221,7 @@ var participants = [
 
 
 module.exports = {
-    years: years,
-    months: months,
+    periods: periods,
     billing_windows: billing_windows,
     billing_types: billing_types,
     payment_matrices: payment_matrices,

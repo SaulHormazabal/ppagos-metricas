@@ -45,6 +45,12 @@ module.exports = function(grunt) {
                 ext: '.json',
                 dest: 'dist/data',
             },
+            images: {
+                expand: true,
+                cwd: 'src/images',
+                src: '**/*',
+                dest: 'dist/images',
+            },
         },
 
         connect: {
@@ -158,6 +164,13 @@ module.exports = function(grunt) {
         watch: {
             options: {
                 livereload: true,
+            },
+            images: {
+                files: ['src/images/**/*'],
+                tasks: ['copy:images'],
+                options: {
+                    spawn: false,
+                },
             },
             json: {
                 files: ['src/data/*.json'],

@@ -7,7 +7,7 @@
             </button>
 
             <a href="index.html" class="navbar-brand">
-                <img src="https://staging-ppagos-sic.coordinadorelectrico.cl/static/cdec_ppagos/images/cdecsic-logo-header.png">
+                <img src="images/logo.png">
             </a>
 
         </div>

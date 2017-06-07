@@ -35,6 +35,8 @@
 
         </div>
 
+        {% include 'pagination.swig' %}
+
     </div>
 
     <div class="col-md-6 co-sm-12">
@@ -67,20 +69,6 @@
             </table>
 
         </div>
-
-    </div>
-
-</div>
-
-<div class="row">
-
-    <div class="col-md-6 co-sm-12">
-
-        {% include 'pagination.swig' %}
-
-    </div>
-
-    <div class="col-md-6 co-sm-12">
 
         {% include 'pagination.swig' %}
 
@@ -121,6 +109,8 @@
 
         </div>
 
+        {% include 'pagination.swig' %}
+
     </div>
 
     <div class="col-md-6 co-sm-12">
@@ -153,20 +143,6 @@
             </table>
 
         </div>
-
-    </div>
-
-</div>
-
-<div class="row">
-
-    <div class="col-md-6 co-sm-12">
-
-        {% include 'pagination.swig' %}
-
-    </div>
-
-    <div class="col-md-6 co-sm-12">
 
         {% include 'pagination.swig' %}
 

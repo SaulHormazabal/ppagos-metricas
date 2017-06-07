@@ -1,0 +1,85 @@
+{
+    "count": 10,
+    "results": [
+        {
+            "ranking": 1,
+            "participant": {
+                "name": "Colbún Transmisión"
+            },
+            "total": 10354368,
+            "pending": 9874562
+        },
+        {
+            "ranking": 2,
+            "participant": {
+                "name": "Chilectra"
+            },
+            "total": 11250620,
+            "pending": 9123456
+        },
+        {
+            "ranking": 3,
+            "participant": {
+                "name": "Generadora Roblería"
+            },
+            "total": 35012254,
+            "pending": 8745654
+        },
+        {
+            "ranking": 4,
+            "participant": {
+                "name": "Inacal"
+            },
+            "total": 8641125,
+            "pending": 8523632
+        },
+        {
+            "ranking": 5,
+            "participant": {
+                "name": "Enlasa"
+            },
+            "total": 96354321,
+            "pending": 8021023
+        },
+        {
+            "ranking": 6,
+            "participant": {
+                "name": "AES Gener"
+            },
+            "total": 45215563,
+            "pending": 7954120
+        },
+        {
+            "ranking": 7,
+            "participant": {
+                "name": "Energía León"
+            },
+            "total": 9321654,
+            "pending": 7021140
+        },
+        {
+            "ranking": 8,
+            "participant": {
+                "name": "Collil"
+            },
+            "total": 6456456,
+            "pending": 5020101
+        },
+        {
+            "ranking": 9,
+            "participant": {
+                "name": "Generadora Piutel"
+            },
+            "total": 5321654,
+            "pending": 4958895
+        },
+        {
+            "ranking": 10,
+            "participant": {
+                "name": "Andes Generación"
+            },
+            "total": 6452258,
+            "pending": 4857745
+        }
+    ]
+}

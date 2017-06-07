@@ -33,5 +33,7 @@
 
     {% block scripts %}{% endblock scripts %}
 
+    <link rel="stylesheet" media="print" href="styles/ppagos.metricas.print.css">
+
 </body>
 </html>

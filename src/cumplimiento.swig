@@ -13,7 +13,10 @@
 
     <br>
 
-    {% include 'templates/payment-instruction-filters.swig' %}
+    <div class="hidden-print">
+        {% include 'templates/payment-instruction-filters.swig' %}
+    </div>
+
     {% include 'templates/close-payment-instructions.swig' %}
     {% include 'templates/fulfillment-dates.swig' %}
     {% include 'templates/billings-vs-payments.swig' %}

@@ -13,7 +13,10 @@
 
     <br>
 
-    {% include 'templates/payment-instruction-filters.swig' %}
+    <div class="hidden-print">
+        {% include 'templates/payment-instruction-filters.swig' %}
+    </div>
+
     {% include 'templates/completeness-reporting-information.swig' %}
 
 {% endblock content %}

@@ -441,10 +441,10 @@ let render_quantity_table = function(selector, data) {
 
 }
 
-$.getJSON('/data/ranking-emisions-creditor-mount.json', render_mount_table.bind(this, '#ranking-emisions-creditor-mount'));
-$.getJSON('/data/ranking-emisions-creditor-quantity.json', render_quantity_table.bind(this, '#ranking-emisions-creditor-quantity'));
+$.getJSON('data/ranking-emisions-creditor-mount.json', render_mount_table.bind(this, '#ranking-emisions-creditor-mount'));
+$.getJSON('data/ranking-emisions-creditor-quantity.json', render_quantity_table.bind(this, '#ranking-emisions-creditor-quantity'));
 
-$.getJSON('/data/ranking-acceptances-debtor-mount.json', render_mount_table.bind(this, '#ranking-acceptances-debtor-mount'));
-$.getJSON('/data/ranking-acceptances-debtor-quantity.json', render_quantity_table.bind(this, '#ranking-acceptances-debtor-quantity'));
+$.getJSON('data/ranking-acceptances-debtor-mount.json', render_mount_table.bind(this, '#ranking-acceptances-debtor-mount'));
+$.getJSON('data/ranking-acceptances-debtor-quantity.json', render_quantity_table.bind(this, '#ranking-acceptances-debtor-quantity'));
 
 },{}]},{},[3]);

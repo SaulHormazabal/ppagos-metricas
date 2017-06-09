@@ -5,21 +5,24 @@ c3.generate({
     },
     data: {
         columns: [
-            ['Pagados',    0.4, 0.6, 0.9, 0.3],
-            ['Pendientes', 0.6, 0.4, 0.1, 0.7],
+            ['Pagados',       0.4, 0.6, 0.9, 0.3],
+            ['Facturado',     0.3, 0.2, 0.05, 0.65],
+            ['Sin facturado', 0.3, 0.2, 0.05, 0.05],
         ],
         type: 'bar',
         order: 'asc',
         groups: [
             [
                 'Pagados',
-                'Pendientes',
+                'Facturado',
+                'Sin facturado',
             ]
         ],
     },
     color: {
         pattern: [
             '#1F77B4',
+            '#FF7F0E',
             '#DDDDDD',
         ]
     },
@@ -58,21 +61,24 @@ c3.generate({
     },
     data: {
         columns: [
-            ['Pagados', 2485621, 7654852, 9124412, 1584734],
-            ['Pendientes', 5987456, 1987456, 1418374, 1584734],
+            ['Pagados',       2485621, 7654852, 9124412, 1584734],
+            ['Facturado',     5987456, 1987456, 1418374, 1584734],
+            ['Sin facturado', 4356156, 2345654, 3456789,  456789],
         ],
         type: 'bar',
         order: 'asc',
         groups: [
             [
                 'Pagados',
-                'Pendientes',
+                'Facturado',
+                'Sin facturado',
             ]
         ],
     },
     color: {
         pattern: [
             '#1F77B4',
+            '#FF7F0E',
             '#DDDDDD',
         ]
     },

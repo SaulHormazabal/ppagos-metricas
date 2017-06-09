@@ -21,30 +21,35 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th class="text-center"><span class="color-blue">◼</span> Pagadas</th>
-                                <th class="text-center"><span class="color-grey">◼</span> Pendiente</th>
+                                <th class="text-right"><span class="color-blue">◼</span> Pagadas</th>
+                                <th class="text-right"><span class="color-orange">◼</span> Facturado</th>
+                                <th class="text-right"><span class="color-grey">◼</span> Sin facturado</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Transferencias Económicas de Energía</td>
-                                <td class="text-center">40%</td>
-                                <td class="text-center">60%</td>
+                                <td class="text-number">40%</td>
+                                <td class="text-number">30%</td>
+                                <td class="text-number">30%</td>
                             </tr>
                             <tr>
                                 <td>Recaudación por Ingresos Tarifarios Troncales de Energía</td>
-                                <td class="text-center">60%</td>
-                                <td class="text-center">40%</td>
+                                <td class="text-number">60%</td>
+                                <td class="text-number">20%</td>
+                                <td class="text-number">20%</td>
                             </tr>
                             <tr>
                                 <td>Balance de Potencia</td>
-                                <td class="text-center">90%</td>
-                                <td class="text-center">10%</td>
+                                <td class="text-number">90%</td>
+                                <td class="text-number">5%</td>
+                                <td class="text-number">5%</td>
                             </tr>
                             <tr>
                                 <td>Servicios Complementarios</td>
-                                <td class="text-center">30%</td>
-                                <td class="text-center">70%</td>
+                                <td class="text-number">30%</td>
+                                <td class="text-number">54%</td>
+                                <td class="text-number">5%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -74,7 +79,8 @@
                             <tr>
                                 <th></th>
                                 <th class="text-right"><span class="color-blue">◼</span> Pagadas</th>
-                                <th class="text-right"><span class="color-grey">◼</span> Pendiente</th>
+                                <th class="text-right"><span class="color-orange">◼</span> Facturado</th>
+                                <th class="text-right"><span class="color-grey">◼</span> Sin facturar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -82,21 +88,25 @@
                                 <td>Transferencias Económicas de Energía</td>
                                 <td class="text-number">$2.485.621</td>
                                 <td class="text-number">$5.987.456</td>
+                                <td class="text-number">$4.356.156</td>
                             </tr>
                             <tr>
                                 <td>Recaudación por Ingresos Tarifarios Troncales de Energía</td>
                                 <td class="text-number">$7.654.852</td>
                                 <td class="text-number">$1.987.456</td>
+                                <td class="text-number">$2.345.654</td>
                             </tr>
                             <tr>
                                 <td>Balance de Potencia</td>
                                 <td class="text-number">$9.124.412</td>
                                 <td class="text-number">$1.418.374</td>
+                                <td class="text-number">$3.456.789</td>
                             </tr>
                             <tr>
                                 <td>Servicios Complementarios</td>
                                 <td class="text-number">$1.584.734</td>
                                 <td class="text-number">$1.584.734</td>
+                                <td class="text-number">$456.789</td>
                             </tr>
                         </tbody>
                     </table>

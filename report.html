@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cumplimiento - Metricas PPagos</title>
+
+    <link rel="stylesheet" href="styles/ppagos.metricas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    
+
+</head>
+<body>
+
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <button data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle collapsed">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <a href="index.html" class="navbar-brand">
+                <img src="images/logo.png">
+            </a>
+
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle active_menu">
+                        Administración
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a id="test" href="#" class="active_menu">
+                                Participantes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="js-modal">
+                                Nuevo usuario
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle ">
+                        Pagos
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">Ventanas de Facturación</a>
+                        </li>
+                        <li>
+                            <a href="#">Instrucciones de Pago</a>
+                        </li>
+                        <li>
+                            <a href="#">Pagos</a>
+                        </li>
+                        <li>
+                            <a href="#">Informar Pago Como Acreedor</a>
+                        </li>
+                        <li>
+                            <a href="#">Informar Pago Como Deudor</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle ">
+                        Métricas
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="cumplimiento.html">
+                                Cumplimiento
+                            </a>
+                        </li>
+                        <li>
+                            <a href="completitud.html">
+                                Completitud
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Usuario</a></li>
+                <li><a href="#">Salir</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+
+    <div class="container-fluid">
+
+        
+
+    <div class="text-center">
+        <h1>Métricas Portal de Pagos</h1>
+        <h3>Cumplimiento</h3>
+    </div>
+
+    <br>
+
+    <div class="hidden-print">
+        <div class="page-header">
+    <h2>Instrucciones de Pago</h2>
+</div>
+
+<p>
+    <b>Métricas para las instrucciones de pago correspondiente a:</b>
+</p>
+
+<form id="filter" action="">
+    <div class="row">
+
+        <div class="col-md-3 col-xs-6">
+            <div class="form-group">
+                <label class="control-label text-center" for="form__type">Tipo</label>
+                <select class="form-control" name="type" id="form__type"></select>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-xs-6">
+            <div class="form-group period">
+                <label class="filter control-label text-center" for="form__filter">Periodos</label>
+                <select class="form-control" name="filter" id="form__filter"></select>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-xs-6">
+            <div class="form-group">
+                <label class="control-label text-center" for="form__creditor">Acreedor</label>
+                <select class="form-control" name="creditor" id="form__creditor"></select>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-xs-6">
+            <div class="form-group">
+                <label class="control-label text-center" for="form__debtor">Deudor</label>
+                <select class="form-control" name="debtor" id="form__debtor"></select>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+<div class="panel panel-green">
+    <div class="panel-heading">Lista de instrucciones de pago</div>
+    <div class="table-responsive">
+        <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center"><input type="checkbox" checked></th>
+                    <th>Concepto</th>
+                    <th class="text-center">Cuadro de pago</th>
+                    <th class="text-center">Acreedor</th>
+                    <th class="text-center">Deudor</th>
+                    <th class="text-center">Monto</th>
+                    <th class="text-center">Publicación</th>
+                    <th class="text-center">Fecha Máxima de Pago</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center"><input type="checkbox" checked></td>
+                    <td>Recaudación por Ingresos Tarifarios Troncales de Energía</td>
+                    <td class="text-center">SIC_[ITTE][Ene17][L][V01]</td>
+                    <td class="text-center">Transelec</td>
+                    <td class="text-center">Luz del Norte</td>
+                    <td class="text-right">$147.070.879</td>
+                    <td class="text-center">05/04/2017</td>
+                    <td class="text-center">23/03/2017</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><input type="checkbox" checked></td>
+                    <td>Balance de Potencia</td>
+                    <td class="text-center">SIC_[SSCC][Feb17][L][V01]</td>
+                    <td class="text-center">Luz del Norte</td>
+                    <td class="text-center">Endesa</td>
+                    <td class="text-right">$81.394.094</td>
+                    <td class="text-center">05/04/2017</td>
+                    <td class="text-center">23/03/2017</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><input type="checkbox" checked></td>
+                    <td>Transferencias Económicas de Energía</td>
+                    <td class="text-center">SIC_[ITTE][Ene17][L][V01]</td>
+                    <td class="text-center">Hidroeléctrica La Confluencia</td>
+                    <td class="text-center">Luz del Norte</td>
+                    <td class="text-right">$12.189.456</td>
+                    <td class="text-center">05/04/2017</td>
+                    <td class="text-center">23/03/2017</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><input type="checkbox" checked></td>
+                    <td>Balance de Potencia</td>
+                    <td class="text-center">SIC_[SSCC][Feb17][R][V01]</td>
+                    <td class="text-center">Luz del Norte</td>
+                    <td class="text-center">Transelec</td>
+                    <td class="text-right">$11.704.128</td>
+                    <td class="text-center">05/04/2017</td>
+                    <td class="text-center">23/03/2017</td>
+                </tr>
+                <tr>
+                    <td class="text-center"><input type="checkbox" checked></td>
+                    <td>Balance de Potencia</td>
+                    <td class="text-center">SIC_[ITTE][Ene17][L][V01]</td>
+                    <td class="text-center">Luz del Norte</td>
+                    <td class="text-center">Aela</td>
+                    <td class="text-right">$8.965.897</td>
+                    <td class="text-center">05/04/2017</td>
+                    <td class="text-center">23/03/2017</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="text-center hidden-print">
+    <ul class="pagination ">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="active" disabled><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    </div>
+
+    <div class="page-header">
+    <h2>Ranking de participantes</h2>
+</div>
+
+<div class="row">
+
+    <div class="col-md-6 co-sm-12">
+
+        <div id="ranking-emisions-creditor-mount" class="panel panel-green">
+
+            <div class="panel-heading">Emisiones pendientes de los acreedores por monto</div>
+
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th class="text-center">Ranking</th>
+                        <th>Participante</th>
+                        <th class="text-center">Total</th>
+                        <th class="text-center">Porcentaje</th>
+                        <th class="text-center text-bold">Pendiente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template>
+                        <tr>
+                            <td class="ranking text-center"></td>
+                            <td class="participant"></td>
+                            <td class="total text-right"></td>
+                            <td class="percentage text-right"></td>
+                            <td class="pending text-bold text-right active"></td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="text-center hidden-print">
+    <ul class="pagination ">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="active" disabled><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    </div>
+
+    <div class="col-md-6 co-sm-12">
+
+        <div id="ranking-emisions-creditor-quantity" class="panel panel-green">
+
+            <div class="panel-heading">Emisiones pendientes de los acreedores por cantidad</div>
+
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th class="text-center">Ranking</th>
+                        <th>Participante</th>
+                        <th class="text-center">Total</th>
+                        <th class="text-center">Porcentaje</th>
+                        <th class="text-center text-bold">Pendiente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template>
+                        <tr>
+                            <td class="ranking text-center"></td>
+                            <td class="participant"></td>
+                            <td class="total text-right"></td>
+                            <td class="percentage text-right"></td>
+                            <td class="pending text-bold text-right active"></td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="text-center hidden-print">
+    <ul class="pagination ">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="active" disabled><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-6 co-sm-12">
+
+        <div id="ranking-acceptances-debtor-mount" class="panel panel-green">
+
+            <div class="panel-heading">Aceptaciones pendientes de los deudores por monto</div>
+
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th class="text-center">Ranking</th>
+                        <th>Participante</th>
+                        <th class="text-center">Total</th>
+                        <th class="text-center">Porcentaje</th>
+                        <th class="text-center text-bold">Pendiente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template>
+                        <tr>
+                            <td class="ranking text-center"></td>
+                            <td class="participant"></td>
+                            <td class="total text-right"></td>
+                            <td class="percentage text-right"></td>
+                            <td class="pending text-bold text-right active"></td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="text-center hidden-print">
+    <ul class="pagination ">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="active" disabled><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    </div>
+
+    <div class="col-md-6 co-sm-12">
+
+        <div id="ranking-acceptances-debtor-quantity" class="panel panel-green">
+
+            <div class="panel-heading">Aceptaciones pendientes de los deudores por cantidad</div>
+
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th class="text-center">Ranking</th>
+                        <th>Participante</th>
+                        <th class="text-center">Total</th>
+                        <th class="text-center">Porcentaje</th>
+                        <th class="text-center text-bold">Pendiente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template>
+                        <tr>
+                            <td class="ranking text-center"></td>
+                            <td class="participant"></td>
+                            <td class="total text-right"></td>
+                            <td class="percentage text-right"></td>
+                            <td class="pending text-bold text-right active"></td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="text-center hidden-print">
+    <ul class="pagination ">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li class="active" disabled><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+    </div>
+
+</div>
+
+    <div class="page-header">
+    <h2>Instrucciones facturadas versus pagadas</h2>
+</div>
+
+<div class="row">
+
+    <div class="col-md-12 col-lg-6">
+
+        <div class="panel panel-green">
+
+            <div class="panel-heading">Cantidades</div>
+
+            <div class="panel-body row">
+
+                <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div id="billings-vs-payments-quantity"></div>
+                </div>
+
+                <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-center">15 días</th>
+                                <th class="text-center">30 días</th>
+                                <th class="text-center">45 días</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="color-blue">◼</span> Pagados</td>
+                                <td class="text-center">60%</td>
+                                <td class="text-center">70%</td>
+                                <td class="text-center">80%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="color-orange">◼</span> Facturados</td>
+                                <td class="text-center">40%</td>
+                                <td class="text-center">30%</td>
+                                <td class="text-center">20%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="color-grey">◼</span> Sin facturar</td>
+                                <td class="text-center">40%</td>
+                                <td class="text-center">30%</td>
+                                <td class="text-center">20%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-12 col-lg-6">
+
+        <div class="panel panel-green">
+
+            <div class="panel-heading">Montos</div>
+
+            <div class="panel-body row">
+
+                <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div id="billings-vs-payments-amount"></div>
+                </div>
+
+                <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-center">15 días</th>
+                                <th class="text-center">30 días</th>
+                                <th class="text-center">45 días</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="color-blue">◼</span> Pagados</td>
+                                <td class="text-number">$2.485.621</td>
+                                <td class="text-number">$7.654.852</td>
+                                <td class="text-number">$9.124.412</td>
+                            </tr>
+                            <tr>
+                                <td><span class="color-orange">◼</span> Facturados</td>
+                                <td class="text-number">$5.987.456</td>
+                                <td class="text-number">$1.987.456</td>
+                                <td class="text-number">$1.418.374</td>
+                            </tr>
+                            <tr>
+                                <td><span class="color-grey">◼</span> Sin facturar</td>
+                                <td class="text-number">$2.753.965</td>
+                                <td class="text-number">$1.584.734</td>
+                                <td class="text-number">$684.256</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="page-header">
+    <h2>Facturaciones por concepto</h2>
+</div>
+
+<div class="row">
+
+    <div class="col-md-12 col-lg-12">
+
+        <div class="panel panel-green">
+
+            <div class="panel-heading">Cantidades</div>
+
+            <div class="panel-body row">
+
+                <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div id="billings-by-types-quantity"></div>
+                </div>
+
+                <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-center"><span class="color-blue">◼</span> Pagadas</th>
+                                <th class="text-center"><span class="color-grey">◼</span> Pendiente</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Transferencias Económicas de Energía</td>
+                                <td class="text-center">40%</td>
+                                <td class="text-center">60%</td>
+                            </tr>
+                            <tr>
+                                <td>Recaudación por Ingresos Tarifarios Troncales de Energía</td>
+                                <td class="text-center">60%</td>
+                                <td class="text-center">40%</td>
+                            </tr>
+                            <tr>
+                                <td>Balance de Potencia</td>
+                                <td class="text-center">90%</td>
+                                <td class="text-center">10%</td>
+                            </tr>
+                            <tr>
+                                <td>Servicios Complementarios</td>
+                                <td class="text-center">30%</td>
+                                <td class="text-center">70%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-12 col-lg-12">
+
+        <div class="panel panel-green">
+
+            <div class="panel-heading">Montos</div>
+
+            <div class="panel-body row">
+
+                <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div id="billings-by-types-amount"></div>
+                </div>
+
+                <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-right"><span class="color-blue">◼</span> Pagadas</th>
+                                <th class="text-right"><span class="color-grey">◼</span> Pendiente</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Transferencias Económicas de Energía</td>
+                                <td class="text-number">$2.485.621</td>
+                                <td class="text-number">$5.987.456</td>
+                            </tr>
+                            <tr>
+                                <td>Recaudación por Ingresos Tarifarios Troncales de Energía</td>
+                                <td class="text-number">$7.654.852</td>
+                                <td class="text-number">$1.987.456</td>
+                            </tr>
+                            <tr>
+                                <td>Balance de Potencia</td>
+                                <td class="text-number">$9.124.412</td>
+                                <td class="text-number">$1.418.374</td>
+                            </tr>
+                            <tr>
+                                <td>Servicios Complementarios</td>
+                                <td class="text-number">$1.584.734</td>
+                                <td class="text-number">$1.584.734</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/i18n/es.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
+
+    <script src="scripts/cumplimiento.js"></script>
+
+
+
+    <link rel="stylesheet" media="print" href="styles/ppagos.metricas.print.css">
+
+</body>
+</html>

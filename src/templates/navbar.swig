@@ -73,6 +73,11 @@
                                 Completitud
                             </a>
                         </li>
+                        <li>
+                            <a href="reporte.html">
+                                Reporte mensual
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

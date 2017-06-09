@@ -1,6 +1,7 @@
-require('./billings-vs-payments.babel');
-require('./billings-by-types.babel');
-require('./participant-ranking.babel');
+require('./components/payment-instructions.js');
+require('./components/billings-vs-payments.js');
+require('./components/billings-by-types.js');
+require('./components/participant-ranking.js');
 
 
 // CIERRE DE INSTRUCCIONES DE PAGO

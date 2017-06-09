@@ -1,4 +1,4 @@
-var data = require('./data.babel');
+var data = require('./data.js');
 
 
 // PAGINATION

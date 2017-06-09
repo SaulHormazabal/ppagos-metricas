@@ -12,25 +12,17 @@ module.exports = function(grunt) {
                     external: ['jquery'],
                 },
                 browserifyOptions: {
+                    debug: true,
                     parserOptions: {
                         sourceType: 'module',
                     },
                 },
             },
-            dev: {
+            build: {
                 files: [{
                     expand: true,
                     cwd: 'src/scripts',
-                    src: ['**/*.babel'],
-                    ext: '.js',
-                    dest: 'dist/scripts',
-                }],
-            },
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'src/scripts',
-                    src: ['**/*.babel'],
+                    src: ['*.js'],
                     ext: '.js',
                     dest: 'dist/scripts',
                 }],
@@ -70,16 +62,7 @@ module.exports = function(grunt) {
         },
 
         swig: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'src',
-                    src: '*.swig',
-                    ext: '.html',
-                    dest: 'dist',
-                }],
-            },
-            dev: {
+            build: {
                 files: [{
                     expand: true,
                     cwd: 'src',
@@ -91,22 +74,11 @@ module.exports = function(grunt) {
         },
 
         htmlmin: {
-            dist: {
-                options: {
-                    removeComments: true,
-                    collapseWhitespace: true,
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'dist',
-                    src: '*.html',
-                    dest: 'dist',
-                }],
+            options: {
+                collapseWhitespace: true,
+                removeComments: true,
             },
-            dev: {
-                options: {
-                    collapseWhitespace: true,
-                },
+            build: {
                 files: [{
                     expand: true,
                     cwd: 'dist',
@@ -138,7 +110,7 @@ module.exports = function(grunt) {
 
             dist: {
                 options: {
-                    map: false,
+                    map: true,
                     processors: [
                         require('postcss-import')(),
                         require('postcss-cssnext')({browsers: ['last 10 versions']}),
@@ -161,6 +133,18 @@ module.exports = function(grunt) {
 
         },
 
+        uglify: {
+            build: {
+                files: [{
+                    expand: true,
+                    cwd: 'dist/scripts',
+                    src: '*.js',
+                    ext: '.js',
+                    dest: 'dist/scripts',
+                }],
+            },
+        },
+
         watch: {
             options: {
                 livereload: true,
@@ -180,22 +164,22 @@ module.exports = function(grunt) {
                 },
             },
             scripts: {
-                files: ['src/scripts/**/*.babel'],
-                tasks: ['browserify:dist'],
+                files: ['src/scripts/**/*.js'],
+                tasks: ['browserify', 'uglify'],
                 options: {
                     spawn: false,
                 },
             },
             styles: {
                 files: ['src/styles/**/*.css'],
-                tasks: ['postcss:dev'],
+                tasks: ['postcss:dist'],
                 options: {
                     spawn: false,
                 },
             },
             swig: {
                 files: ['src/**/*.swig'],
-                tasks: ['swig:dist', 'htmlmin:dist'],
+                tasks: ['swig', 'htmlmin'],
                 options: {
                     spawn: false,
                 },
@@ -207,23 +191,26 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
-    grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-swig-templates');
 
     grunt.registerTask('default', [
-        'browserify:dev',
-        'postcss:dev',
-        'swig:dev',
-        'htmlmin:dev',
+        'browserify',
+        'uglify',
+        'postcss:dist',
+        'swig',
+        'htmlmin',
+        'copy',
     ]);
 
-    grunt.registerTask('dist', [
-        'browserify:dev',
-        'postcss:dist',
-        'swig:dist',
-        'htmlmin:dist',
+    grunt.registerTask('dev', [
+        'browserify',
+        'uglify',
+        'postcss:dev',
+        'swig',
+        'copy',
     ]);
 
 };

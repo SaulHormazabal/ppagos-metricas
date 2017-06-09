@@ -14,7 +14,7 @@
     <br>
 
     <div class="hidden-print">
-        {% include 'templates/payment-instruction-filters.swig' %}
+        {% include 'templates/payment-instructions.swig' %}
     </div>
 
     {% include 'templates/completeness-reporting-information.swig' %}
@@ -31,6 +31,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
 
     <script src="scripts/completitud.js"></script>
-    <script src="scripts/main.js"></script>
 
 {% endblock scripts %}

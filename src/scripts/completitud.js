@@ -1,3 +1,6 @@
+require('./components/payment-instructions.js');
+
+
 // COMPLETITUD DEL PROCESO
 // -----------------------
 

@@ -48,7 +48,7 @@
                             <tr>
                                 <td>Servicios Complementarios</td>
                                 <td class="text-number">30%</td>
-                                <td class="text-number">54%</td>
+                                <td class="text-number">55%</td>
                                 <td class="text-number">5%</td>
                             </tr>
                         </tbody>

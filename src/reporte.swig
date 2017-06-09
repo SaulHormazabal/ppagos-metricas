@@ -14,11 +14,25 @@
     <br>
 
     <div class="hidden-print">
-        {% include 'templates/payment-instructions.swig' %}
+
+        <form id="filter" action="">
+            <div class="row">
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="form-group period">
+                        <label class="filter control-label text-center" for="form__period">Periodos</label>
+                        <select class="form-control" name="period" id="form__period"></select>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
     </div>
 
-    {% include 'templates/close-payment-instructions.swig' %}
-    {% include 'templates/fulfillment-dates.swig' %}
+    {% include 'templates/participant-ranking.swig' %}
+    {% include 'templates/billings-vs-payments.swig' %}
+    {% include 'templates/billings-by-types.swig' %}
 
 {% endblock content %}
 
@@ -31,6 +45,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.11/c3.min.js"></script>
 
-    <script src="scripts/cumplimiento.js"></script>
+    <script src="scripts/reporte.js"></script>
 
 {% endblock scripts %}

@@ -1,14 +1,14 @@
 {% extends 'templates/base.swig' %}
 
 
-{% block title %}Cumplimiento - Metricas PPagos{% endblock title %}
+{% block title %}Reporte mensual - Metricas PPagos{% endblock title %}
 
 
 {% block content %}
 
     <div class="text-center">
         <h1>Métricas Portal de Pagos</h1>
-        <h3>Cumplimiento</h3>
+        <h3>Reporte mensual</h3>
     </div>
 
     <br>

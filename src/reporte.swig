@@ -41,6 +41,8 @@
     {% include 'templates/billings-vs-payments.swig' %}
     {% include 'templates/billings-by-types.swig' %}
 
+    <img class="hidden" src="images/logo.report.cen.png">
+
 {% endblock content %}
 
 

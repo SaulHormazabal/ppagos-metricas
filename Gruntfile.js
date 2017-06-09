@@ -61,6 +61,19 @@ module.exports = function(grunt) {
             },
         },
 
+        exorcise: {
+            build: {
+                options: {},
+                files: [{
+                    expand: true,
+                    cwd: 'dist/scripts',
+                    src: ['*.js'],
+                    ext: '.map',
+                    dest: 'dist/scripts',
+                }],
+            }
+        },
+
         swig: {
             build: {
                 files: [{
@@ -134,6 +147,15 @@ module.exports = function(grunt) {
         },
 
         uglify: {
+            options: {
+                sourceMap: true,
+                sourceMapIn: (file) => {
+                    return file.replace(/\.js$/, '.map');
+                },
+                sourceMapName: (file) => {
+                    return file.replace(/\.js$/, '.map');
+                },
+            },
             build: {
                 files: [{
                     expand: true,
@@ -165,7 +187,7 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: ['src/scripts/**/*.js'],
-                tasks: ['browserify', 'uglify'],
+                tasks: ['browserify', 'exorcise', 'uglify'],
                 options: {
                     spawn: false,
                 },
@@ -193,11 +215,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-exorcise');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-swig-templates');
 
     grunt.registerTask('default', [
         'browserify',
+        'exorcise',
         'uglify',
         'postcss:dist',
         'swig',

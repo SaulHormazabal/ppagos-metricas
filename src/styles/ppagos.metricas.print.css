@@ -8,11 +8,11 @@ td {
 
 
 .page-header {
-    page-break-before: always;
     background-image: url('../images/logo.report.cen.png') !important;
+    background-position-x: 950px !important;
     background-repeat: no-repeat !important;
     background-size: 70px auto !important;
-    background-position-x: 950px !important;
+    page-break-before: always;
 }
 
 
@@ -22,7 +22,11 @@ table , table * {
 
 
 .cover {
-    margin-top: 300px;
+    background-image: url('../images/logo.report.cen.png') !important;
+    background-position-x: 50px !important;
+    background-repeat: no-repeat !important;
+    background-size: 200px auto !important;
+    padding-top: 300px;
 }
 
 

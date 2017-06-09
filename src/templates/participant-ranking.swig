@@ -4,7 +4,7 @@
 
 <div class="row">
 
-    <div class="col-md-6 co-sm-12">
+    <div class="col-md-6 co-sm-12 col-xs-6">
 
         <div id="ranking-emisions-creditor-mount" class="panel panel-green">
 
@@ -13,10 +13,10 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th class="text-center">Ranking</th>
+                        <th class="text-center">Nº</th>
                         <th>Participante</th>
                         <th class="text-center">Total</th>
-                        <th class="text-center">Porcentaje</th>
+                        <th class="text-center">%</th>
                         <th class="text-center text-bold">Pendiente</th>
                     </tr>
                 </thead>
@@ -39,7 +39,7 @@
 
     </div>
 
-    <div class="col-md-6 co-sm-12">
+    <div class="col-md-6 co-sm-12 col-xs-6">
 
         <div id="ranking-emisions-creditor-quantity" class="panel panel-green">
 
@@ -48,7 +48,7 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th class="text-center">Ranking</th>
+                        <th class="text-center">Nº</th>
                         <th>Participante</th>
                         <th class="text-center">Total</th>
                         <th class="text-center">Porcentaje</th>
@@ -78,7 +78,7 @@
 
 <div class="row">
 
-    <div class="col-md-6 co-sm-12">
+    <div class="col-md-6 co-sm-12 col-xs-6">
 
         <div id="ranking-acceptances-debtor-mount" class="panel panel-green">
 
@@ -87,10 +87,10 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th class="text-center">Ranking</th>
+                        <th class="text-center">Nº</th>
                         <th>Participante</th>
                         <th class="text-center">Total</th>
-                        <th class="text-center">Porcentaje</th>
+                        <th class="text-center">%</th>
                         <th class="text-center text-bold">Pendiente</th>
                     </tr>
                 </thead>
@@ -113,7 +113,7 @@
 
     </div>
 
-    <div class="col-md-6 co-sm-12">
+    <div class="col-md-6 co-sm-12 col-xs-6">
 
         <div id="ranking-acceptances-debtor-quantity" class="panel panel-green">
 
@@ -122,10 +122,10 @@
             <table class="table table-condensed">
                 <thead>
                     <tr>
-                        <th class="text-center">Ranking</th>
+                        <th class="text-center">Nº</th>
                         <th>Participante</th>
                         <th class="text-center">Total</th>
-                        <th class="text-center">Porcentaje</th>
+                        <th class="text-center">%</th>
                         <th class="text-center text-bold">Pendiente</th>
                     </tr>
                 </thead>

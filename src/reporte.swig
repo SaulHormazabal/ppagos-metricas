@@ -6,16 +6,17 @@
 
 {% block content %}
 
-    <div class="text-center">
+    <div class="cover">
         <h1>Métricas Portal de Pagos</h1>
         <h3>Reporte mensual</h3>
+        <h4 class="visible-print">Marzo de 2017</h4>
     </div>
 
     <br>
 
-    <div class="hidden-print">
+    <div class="row hidden-print">
 
-        <form id="filter" action="">
+        <form id="filter" class="col-xs-6" action="">
             <div class="row">
 
                 <div class="col-md-3 col-xs-6">
@@ -27,6 +28,12 @@
 
             </div>
         </form>
+
+        <div class="col-xs-6 text-right">
+            <label for="">&nbsp;</label>
+            <br>
+            <a href="downloads/reporte.pdf" class="btn btn-default">Descargar</a>
+        </div>
 
     </div>
 

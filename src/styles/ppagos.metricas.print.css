@@ -1,3 +1,31 @@
+body {
+    font-size: 8pt;
+}
+
+td {
+    padding: 0px 5px !important;
+}
+
+
+.page-header {
+    page-break-before: always;
+    background-image: url('../images/logo.report.cen.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: 70px auto !important;
+    background-position-x: 950px !important;
+}
+
+
+table , table * {
+    z-index: -1000;
+}
+
+
+.cover {
+    margin-top: 300px;
+}
+
+
 .color-blue {
     color: #1F77B4 !important;
 }
@@ -26,6 +54,12 @@
 .color-purple {
     color: #9467BD !important;
 }
+
+
+.panel-heading {
+    padding: 5px;
+}
+
 
 .panel-green {
     & .panel-heading {

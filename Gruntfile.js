@@ -43,6 +43,12 @@ module.exports = function(grunt) {
                 src: '**/*',
                 dest: 'dist/images',
             },
+            downloads: {
+                expand: true,
+                cwd: 'src/downloads',
+                src: '**/*',
+                dest: 'dist/downloads',
+            },
         },
 
         connect: {
@@ -170,6 +176,13 @@ module.exports = function(grunt) {
         watch: {
             options: {
                 livereload: true,
+            },
+            downloads: {
+                files: ['src/downloads/**/*'],
+                tasks: ['copy:downloads'],
+                options: {
+                    spawn: false,
+                },
             },
             images: {
                 files: ['src/images/**/*'],

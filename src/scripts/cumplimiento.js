@@ -96,6 +96,11 @@ c3.generate({
         right: 5,
         left: 35,
     },
+    bar: {
+        width: {
+            max: 92,
+        },
+    },
     axis: {
         x: {
             categories:[
@@ -149,6 +154,11 @@ c3.generate({
     padding: {
         right: 5,
         left: 35,
+    },
+    bar: {
+        width: {
+            max: 92,
+        },
     },
     axis: {
         x: {

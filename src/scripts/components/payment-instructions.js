@@ -1,24 +1,6 @@
 var data = require('./data.js');
 
 
-// PAGINATION
-// -------------------------------
-
-$('.pagination a').on('click', function(e) {
-    e.preventDefault();
-
-    $(this).parents('.pagination').find('li.active').removeClass('active');
-    $(this).parents('li:first').addClass('active');
-});
-
-
-// SELECT2
-// -------------------------------
-
-$.fn.select2.defaults.set('theme', 'bootstrap');
-$.fn.select2.defaults.set('width', '100%');
-
-
 var $type = $('#form__type').select2({
     data: [
         {id: 'periods', text: 'Periodo', selected: true},

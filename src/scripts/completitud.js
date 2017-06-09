@@ -1,3 +1,4 @@
+require('./components/base.js');
 require('./components/payment-instructions.js');
 
 

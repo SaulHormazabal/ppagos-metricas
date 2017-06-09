@@ -32,7 +32,7 @@
         <div class="col-xs-6 text-right">
             <label for="">&nbsp;</label>
             <br>
-            <a href="downloads/reporte.pdf" class="btn btn-default">Descargar</a>
+            <a href="downloads/reporte.pdf" target="_blank" class="btn btn-default">Descargar</a>
         </div>
 
     </div>

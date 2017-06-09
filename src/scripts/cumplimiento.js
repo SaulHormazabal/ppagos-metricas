@@ -1,8 +1,5 @@
 require('./components/base.js');
 require('./components/payment-instructions.js');
-require('./components/billings-vs-payments.js');
-require('./components/billings-by-types.js');
-require('./components/participant-ranking.js');
 
 
 // CIERRE DE INSTRUCCIONES DE PAGO

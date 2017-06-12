@@ -2,18 +2,69 @@
     <h2>Facturaciones por concepto</h2>
 </div>
 
-<div class="row">
+<div id="billings-by-types" class="row">
 
-    <div class="col-md-12 col-lg-12">
+    <template id="template-billing-type">
+
+        <div class="col-md-12 col-lg-6">
+
+            <div class="panel panel-green">
+
+                <div class="panel-heading"></div>
+
+                <div class="panel-body row">
+
+                    <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                        <div></div>
+                    </div>
+
+                    <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-right">Monto</th>
+                                    <th class="text-right">Porcentaje</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="paid">
+                                    <td><span class="color-blue">◼</span> Pagado</td>
+                                    <td class="text-number mount"></td>
+                                    <td class="text-number percentage"></td>
+                                </tr>
+                                <tr class="invoiced">
+                                    <td><span class="color-orange">◼</span> Facturado</td>
+                                    <td class="text-number mount"></td>
+                                    <td class="text-number percentage"></td>
+                                </tr>
+                                <tr class="unbilled">
+                                    <td><span class="color-grey">◼</span> Sin facturar</td>
+                                    <td class="text-number mount"></td>
+                                    <td class="text-number percentage"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </template>
+{#
+    <div class="col-md-12 col-lg-6">
 
         <div class="panel panel-green">
 
-            <div class="panel-heading">Cantidades</div>
+            <div class="panel-heading">Transferencias Económicas de Energía</div>
 
             <div class="panel-body row">
 
                 <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
-                    <div id="billings-by-types-quantity"></div>
+                    <div id="billings-by-types-amount-tee"></div>
                 </div>
 
                 <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
@@ -21,35 +72,25 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th class="text-right"><span class="color-blue">◼</span> Pagadas</th>
-                                <th class="text-right"><span class="color-orange">◼</span> Facturado</th>
-                                <th class="text-right"><span class="color-grey">◼</span> Sin facturado</th>
+                                <th class="text-right">Monto</th>
+                                <th class="text-right">Porcentaje</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Transferencias Económicas de Energía</td>
-                                <td class="text-number">40%</td>
-                                <td class="text-number">30%</td>
-                                <td class="text-number">30%</td>
+                                <td><span class="color-blue">◼</span> Pagado</td>
+                                <td class="text-number">$9.456.125</td>
+                                <td class="text-number" data-raw="64.05024382594901">64.05%</td>
                             </tr>
                             <tr>
-                                <td>Recaudación por Ingresos Tarifarios Troncales de Energía</td>
-                                <td class="text-number">60%</td>
-                                <td class="text-number">20%</td>
-                                <td class="text-number">20%</td>
+                                <td><span class="color-orange">◼</span> Facturado</td>
+                                <td class="text-number">$4.562.357</td>
+                                <td class="text-number" data-raw="30.902730058139593">30.90%</td>
                             </tr>
                             <tr>
-                                <td>Balance de Potencia</td>
-                                <td class="text-number">90%</td>
-                                <td class="text-number">5%</td>
-                                <td class="text-number">5%</td>
-                            </tr>
-                            <tr>
-                                <td>Servicios Complementarios</td>
-                                <td class="text-number">30%</td>
-                                <td class="text-number">55%</td>
-                                <td class="text-number">5%</td>
+                                <td><span class="color-grey">◼</span> Sin facturar</td>
+                                <td class="text-number">$1.745.123</td>
+                                <td class="text-number" data-raw="0.1182043952002238">11.82%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -61,16 +102,16 @@
 
     </div>
 
-    <div class="col-md-12 col-lg-12">
+    <div class="col-md-12 col-lg-6">
 
         <div class="panel panel-green">
 
-            <div class="panel-heading">Montos</div>
+            <div class="panel-heading">Recaudación por Ingresos Tarifarios Troncales de Energía</div>
 
             <div class="panel-body row">
 
                 <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
-                    <div id="billings-by-types-amount"></div>
+                    <div id="billings-by-types-amount-itte"></div>
                 </div>
 
                 <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
@@ -78,35 +119,25 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th class="text-right"><span class="color-blue">◼</span> Pagadas</th>
-                                <th class="text-right"><span class="color-orange">◼</span> Facturado</th>
-                                <th class="text-right"><span class="color-grey">◼</span> Sin facturar</th>
+                                <th class="text-right">Monto</th>
+                                <th class="text-right">Porcentaje</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Transferencias Económicas de Energía</td>
-                                <td class="text-number">$2.485.621</td>
-                                <td class="text-number">$5.987.456</td>
-                                <td class="text-number">$4.356.156</td>
+                                <td><span class="color-blue">◼</span> Pagado</td>
+                                <td class="text-number">$9.456.125</td>
+                                <td class="text-number" data-raw="64.05024382594901">64.05%</td>
                             </tr>
                             <tr>
-                                <td>Recaudación por Ingresos Tarifarios Troncales de Energía</td>
-                                <td class="text-number">$7.654.852</td>
-                                <td class="text-number">$1.987.456</td>
-                                <td class="text-number">$2.345.654</td>
+                                <td><span class="color-orange">◼</span> Facturado</td>
+                                <td class="text-number">$4.562.357</td>
+                                <td class="text-number" data-raw="30.902730058139593">30.90%</td>
                             </tr>
                             <tr>
-                                <td>Balance de Potencia</td>
-                                <td class="text-number">$9.124.412</td>
-                                <td class="text-number">$1.418.374</td>
-                                <td class="text-number">$3.456.789</td>
-                            </tr>
-                            <tr>
-                                <td>Servicios Complementarios</td>
-                                <td class="text-number">$1.584.734</td>
-                                <td class="text-number">$1.584.734</td>
-                                <td class="text-number">$456.789</td>
+                                <td><span class="color-grey">◼</span> Sin facturar</td>
+                                <td class="text-number">$1.745.123</td>
+                                <td class="text-number" data-raw="0.1182043952002238">11.82%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -118,4 +149,99 @@
 
     </div>
 
+    <div class="col-md-12 col-lg-6">
+
+        <div class="panel panel-green">
+
+            <div class="panel-heading">Balance de Potencia</div>
+
+            <div class="panel-body row">
+
+                <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div id="billings-by-types-amount-bp"></div>
+                </div>
+
+                <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-right">Monto</th>
+                                <th class="text-right">Porcentaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="color-blue">◼</span> Pagado</td>
+                                <td class="text-number">$9.456.125</td>
+                                <td class="text-number" data-raw="64.05024382594901">64.05%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="color-orange">◼</span> Facturado</td>
+                                <td class="text-number">$4.562.357</td>
+                                <td class="text-number" data-raw="30.902730058139593">30.90%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="color-grey">◼</span> Sin facturar</td>
+                                <td class="text-number">$1.745.123</td>
+                                <td class="text-number" data-raw="0.1182043952002238">11.82%</td>
+                            </tr>
+                        </tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-12 col-lg-6">
+
+        <div class="panel panel-green">
+
+            <div class="panel-heading">Servicios Complementarios</div>
+
+            <div class="panel-body row">
+
+                <div class="chart col-xs-12 col-sm-7 col-md-7 col-lg-7">
+                    <div id="billings-by-types-amount-sscc"></div>
+                </div>
+
+                <div class="detail col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-right">Monto</th>
+                                <th class="text-right">Porcentaje</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="color-blue">◼</span> Pagado</td>
+                                <td class="text-number">$9.456.125</td>
+                                <td class="text-number" data-raw="64.05024382594901">64.05%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="color-orange">◼</span> Facturado</td>
+                                <td class="text-number">$4.562.357</td>
+                                <td class="text-number" data-raw="30.902730058139593">30.90%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="color-grey">◼</span> Sin facturar</td>
+                                <td class="text-number">$1.745.123</td>
+                                <td class="text-number" data-raw="0.1182043952002238">11.82%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+ #}
 </div>

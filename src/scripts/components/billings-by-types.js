@@ -55,13 +55,18 @@ let render = (data) => {
                     '#DDDDDD',
                 ]
             },
+            bar: {
+                width: {
+                    max: 20,
+                },
+            },
             axis: {
                 rotated: true,
                 x: {
                     categories:[
                         row.initial.toUpperCase(),
                     ],
-                    type: 'category'
+                    type: 'category',
                 },
                 y: {
                     padding: 10,

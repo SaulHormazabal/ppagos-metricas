@@ -244,7 +244,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask('dev', [
         'browserify',
-        'uglify',
         'postcss:dev',
         'swig',
         'copy',

@@ -19,23 +19,23 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th class="text-center">15 días</th>
-                                <th class="text-center">30 días</th>
-                                <th class="text-center">45 días</th>
+                                <th class="text-right">15 días</th>
+                                <th class="text-right">30 días</th>
+                                <th class="text-right">45 días</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td><span class="color-blue">◼</span> Cerrados</td>
-                                <td class="text-center">60%</td>
-                                <td class="text-center">70%</td>
-                                <td class="text-center">80%</td>
+                                <td class="text-number">60%</td>
+                                <td class="text-number">70%</td>
+                                <td class="text-number">80%</td>
                             </tr>
                             <tr>
                                 <td><span class="color-grey">◼</span> Abiertos</td>
-                                <td class="text-center">40%</td>
-                                <td class="text-center">30%</td>
-                                <td class="text-center">20%</td>
+                                <td class="text-number">40%</td>
+                                <td class="text-number">30%</td>
+                                <td class="text-number">20%</td>
                             </tr>
                         </tbody>
                     </table>

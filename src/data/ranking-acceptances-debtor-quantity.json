@@ -6,80 +6,80 @@
             "participant": {
                 "name": "Energía Cerro El Morado"
             },
-            "total": 1035,
-            "pending": 987
+            "total": 2135,
+            "pending": 997
         },
         {
             "ranking": 2,
             "participant": {
                 "name": "Contra"
             },
-            "total": 1125,
-            "pending": 912
+            "total": 3225,
+            "pending": 922
         },
         {
             "ranking": 3,
             "participant": {
                 "name": "Parque Eólico El Arrayán"
             },
-            "total": 3501,
-            "pending": 874
+            "total": 2601,
+            "pending": 884
         },
         {
             "ranking": 4,
             "participant": {
                 "name": "Eléctrica Caren"
             },
-            "total": 864,
-            "pending": 852
+            "total": 1874,
+            "pending": 862
         },
         {
             "ranking": 5,
             "participant": {
                 "name": "PMGD Bureo"
             },
-            "total": 9635,
-            "pending": 802
+            "total": 7645,
+            "pending": 812
         },
         {
             "ranking": 6,
             "participant": {
                 "name": "Chungungo"
             },
-            "total": 4521,
-            "pending": 795
+            "total": 3531,
+            "pending": 805
         },
         {
             "ranking": 7,
             "participant": {
                 "name": "Parque Eólico Talinay"
             },
-            "total": 932,
-            "pending": 702
+            "total": 1942,
+            "pending": 712
         },
         {
             "ranking": 8,
             "participant": {
                 "name": "Termoeléctrica Colmito"
             },
-            "total": 645,
-            "pending": 502
+            "total": 1655,
+            "pending": 512
         },
         {
             "ranking": 9,
             "participant": {
                 "name": "Biocruz Generación"
             },
-            "total": 532,
-            "pending": 495
+            "total": 942,
+            "pending": 505
         },
         {
             "ranking": 10,
             "participant": {
                 "name": "Nueva Energía"
             },
-            "total": 645,
-            "pending": 485
+            "total": 1055,
+            "pending": 495
         }
     ]
 }

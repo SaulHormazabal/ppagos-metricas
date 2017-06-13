@@ -72,9 +72,9 @@
                         <thead>
                             <tr>
                                 <th></th>
-                                <th class="text-center">15 días</th>
-                                <th class="text-center">30 días</th>
-                                <th class="text-center">45 días</th>
+                                <th class="text-right">15 días</th>
+                                <th class="text-right">30 días</th>
+                                <th class="text-right">45 días</th>
                             </tr>
                         </thead>
                         <tbody>

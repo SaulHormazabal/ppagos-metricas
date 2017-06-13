@@ -60,7 +60,7 @@
                 <tr>
                     <td class="text-center"><input type="checkbox" checked></td>
                     <td>Recaudación por Ingresos Tarifarios Troncales de Energía</td>
-                    <td class="text-center">SIC_[ITTE][Ene17][L][V01]</td>
+                    <td class="text-center text-nowrap">SIC_[ITTE][Ene17][L][V01]</td>
                     <td class="text-center">Transelec</td>
                     <td class="text-center">Luz del Norte</td>
                     <td class="text-right">$147.070.879</td>
@@ -70,7 +70,7 @@
                 <tr>
                     <td class="text-center"><input type="checkbox" checked></td>
                     <td>Balance de Potencia</td>
-                    <td class="text-center">SIC_[SSCC][Feb17][L][V01]</td>
+                    <td class="text-center text-nowrap">SIC_[SSCC][Feb17][L][V01]</td>
                     <td class="text-center">Luz del Norte</td>
                     <td class="text-center">Endesa</td>
                     <td class="text-right">$81.394.094</td>
@@ -80,7 +80,7 @@
                 <tr>
                     <td class="text-center"><input type="checkbox" checked></td>
                     <td>Transferencias Económicas de Energía</td>
-                    <td class="text-center">SIC_[ITTE][Ene17][L][V01]</td>
+                    <td class="text-center text-nowrap">SIC_[ITTE][Ene17][L][V01]</td>
                     <td class="text-center">Hidroeléctrica La Confluencia</td>
                     <td class="text-center">Luz del Norte</td>
                     <td class="text-right">$12.189.456</td>
@@ -90,7 +90,7 @@
                 <tr>
                     <td class="text-center"><input type="checkbox" checked></td>
                     <td>Balance de Potencia</td>
-                    <td class="text-center">SIC_[SSCC][Feb17][R][V01]</td>
+                    <td class="text-center text-nowrap">SIC_[SSCC][Feb17][R][V01]</td>
                     <td class="text-center">Luz del Norte</td>
                     <td class="text-center">Transelec</td>
                     <td class="text-right">$11.704.128</td>
@@ -100,7 +100,7 @@
                 <tr>
                     <td class="text-center"><input type="checkbox" checked></td>
                     <td>Balance de Potencia</td>
-                    <td class="text-center">SIC_[ITTE][Ene17][L][V01]</td>
+                    <td class="text-center text-nowrap">SIC_[ITTE][Ene17][L][V01]</td>
                     <td class="text-center">Luz del Norte</td>
                     <td class="text-center">Aela</td>
                     <td class="text-right">$8.965.897</td>

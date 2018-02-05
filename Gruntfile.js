@@ -6,7 +6,7 @@ module.exports = function(grunt) {
 
         browserify: {
             options: {
-                transform: [['babelify', {presets: ['es2015']}]],
+                transform: [['babelify', {presets: ['env']}]],
                 sourceType: 'module',
                 options: {
                     external: ['jquery'],

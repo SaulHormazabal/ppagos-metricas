@@ -26,7 +26,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="color-blue">◼</span> Cerrados</td>
+                                <td><span class="color-default">◼</span> Cerrados</td>
                                 <td class="text-number">60%</td>
                                 <td class="text-number">70%</td>
                                 <td class="text-number">80%</td>
@@ -67,7 +67,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="color-blue">◼</span> Cerrados</td>
+                                <td><span class="color-default">◼</span> Cerrados</td>
                                 <td class="text-center">60%</td>
                                 <td class="text-center">70%</td>
                                 <td class="text-center">80%</td>
@@ -107,7 +107,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="color-blue">◼</span> Cerrados</td>
+                                <td><span class="color-default">◼</span> Cerrados</td>
                                 <td class="text-center">60%</td>
                                 <td class="text-center">70%</td>
                                 <td class="text-center">80%</td>
@@ -147,7 +147,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="color-blue">◼</span> Cerrados</td>
+                                <td><span class="color-default">◼</span> Cerrados</td>
                                 <td class="text-center">60%</td>
                                 <td class="text-center">70%</td>
                                 <td class="text-center">80%</td>

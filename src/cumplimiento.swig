@@ -17,7 +17,6 @@
         {% include 'templates/payment-instructions.swig' %}
     </div>
 
-    {% include 'templates/close-payment-instructions.swig' %}
     {% include 'templates/fulfillment-dates.swig' %}
 
 {% endblock content %}

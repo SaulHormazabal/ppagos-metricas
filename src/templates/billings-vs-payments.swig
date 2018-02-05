@@ -28,22 +28,22 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="color-blue">◼</span> Pagados</td>
+                                <td><span class="color-blue">◼</span> Pagadas</td>
+                                <td class="text-center">30%</td>
                                 <td class="text-center">60%</td>
+                                <td class="text-center">90%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="color-orange">◼</span> Facturadas</td>
                                 <td class="text-center">70%</td>
                                 <td class="text-center">80%</td>
+                                <td class="text-center">95%</td>
                             </tr>
                             <tr>
-                                <td><span class="color-orange">◼</span> Facturados</td>
-                                <td class="text-center">40%</td>
-                                <td class="text-center">30%</td>
-                                <td class="text-center">20%</td>
-                            </tr>
-                            <tr>
-                                <td><span class="color-grey">◼</span> Sin facturar</td>
-                                <td class="text-center">40%</td>
-                                <td class="text-center">30%</td>
-                                <td class="text-center">20%</td>
+                                <td><span class="color-green">◼</span> Cerradas</td>
+                                <td class="text-center">75%</td>
+                                <td class="text-center">45%</td>
+                                <td class="text-center">25%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -79,22 +79,22 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span class="color-blue">◼</span> Pagados</td>
+                                <td><span class="color-blue">◼</span> Pagadas</td>
                                 <td class="text-number">$2.485.621</td>
                                 <td class="text-number">$7.654.852</td>
                                 <td class="text-number">$9.124.412</td>
                             </tr>
                             <tr>
-                                <td><span class="color-orange">◼</span> Facturados</td>
-                                <td class="text-number">$5.987.456</td>
+                                <td><span class="color-orange">◼</span> Facturadas</td>
                                 <td class="text-number">$1.987.456</td>
-                                <td class="text-number">$1.418.374</td>
+                                <td class="text-number">$3.987.456</td>
+                                <td class="text-number">$6.418.374</td>
                             </tr>
                             <tr>
-                                <td><span class="color-grey">◼</span> Sin facturar</td>
-                                <td class="text-number">$2.753.965</td>
-                                <td class="text-number">$1.584.734</td>
-                                <td class="text-number">$684.256</td>
+                                <td><span class="color-green">◼</span> Cerradas</td>
+                                <td class="text-number">$1.124.412</td>
+                                <td class="text-number">$2.485.621</td>
+                                <td class="text-number">$3.654.852</td>
                             </tr>
                         </tbody>
                     </table>

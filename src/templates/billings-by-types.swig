@@ -38,11 +38,13 @@
                                     <td class="text-number mount"></td>
                                     <td class="text-number percentage"></td>
                                 </tr>
+                                {#
                                 <tr class="unbilled">
                                     <td><span class="color-grey">◼</span> Sin facturar</td>
                                     <td class="text-number mount"></td>
                                     <td class="text-number percentage"></td>
                                 </tr>
+                                #}
                             </tbody>
                         </table>
                     </div>

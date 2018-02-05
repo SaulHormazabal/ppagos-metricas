@@ -18,6 +18,7 @@
     </div>
 
     {% include 'templates/completeness-reporting-information.swig' %}
+    {% include 'templates/close-payment-instructions.swig' %}
 
 {% endblock content %}
 

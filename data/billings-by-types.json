@@ -5,32 +5,28 @@
             "initial": "tee",
             "paid": 345486357,
             "invoiced": 125487125,
-            "unbilled": 13325654
-
+            "total": 484299136
         },
         {
             "name": "Recaudación por Ingresos Tarifarios Troncales de Energía",
             "initial": "itte",
             "paid": 9456125,
             "invoiced": 4562357,
-            "unbilled": 1745123
-
+            "total": 15763605
         },
         {
             "name": "Balance de Potencia",
             "initial": "bp",
             "paid": 45123852,
             "invoiced": 9465789,
-            "unbilled": 1025420
-
+            "total": 55615061
         },
         {
             "name": "Servicios Complementarios",
             "initial": "sscc",
             "paid": 65456741,
             "invoiced": 23456741,
-            "unbilled": 15412365
-
+            "total": 104325847
         }
     ]
 }
